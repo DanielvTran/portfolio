@@ -1,6 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import axios from 'axios';
 
+export const config = {
+	runtime: 'edge'
+};
+
 export const GET: RequestHandler = async ({ request }) => {
 	const stream = new ReadableStream({
 		async start(controller) {
