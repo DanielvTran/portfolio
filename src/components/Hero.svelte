@@ -9,8 +9,12 @@
 			<h1 class="text-5xl font-bold text-secondary">Hi my name is Daniel Tran! 🙌</h1>
 			<p class="py-6 text-2xl text-secondary">Web Developer</p>
 			<div class="quick-nav flex flex-row w-full gap-5">
-				<button class="btn btn-primary bg-secondary font-bold">Projects</button>
-				<button class="btn btn-primary bg-secondary font-bold">About Me</button>
+				<a href="#projects" class="btn btn-primary bg-secondary hover:bg-gray-300 font-bold"
+					>Projects</a
+				>
+				<a href="#about" class="btn btn-primary bg-secondary hover:bg-gray-300 font-bold"
+					>About Me</a
+				>
 			</div>
 		</div>
 		<img

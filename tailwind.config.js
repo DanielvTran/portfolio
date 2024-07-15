@@ -3,6 +3,7 @@ export default {
 	content: ['./src/**/*.{html,svelte,js,ts}'],
 	theme: {
 		extend: {
+			scrollBehavior: ['smooth'],
 			colors: {
 				primary: {
 					DEFAULT: '#003060' // Main primary color
