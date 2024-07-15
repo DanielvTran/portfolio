@@ -3,7 +3,7 @@
 	import bodyshot from '../../static/bodyshot.jpeg';
 </script>
 
-<div class="hero bg-secondary min-h-screen w-full">
+<div id="about" class="hero bg-secondary min-h-screen w-full">
 	<div class="hero-content w-full flex-col lg:flex-row-reverse">
 		<div class="w-1/2">
 			<h1 class="text-5xl font-bold text-primary">About Me</h1>
@@ -13,6 +13,10 @@
 			</p>
 			<button class="btn btn-primary">Get Started</button>
 		</div>
-		<img src={bodyshot} class="max-w-sm rounded-lg shadow-2xl w-1/2" />
+		<img
+			src={bodyshot}
+			class="max-w-sm rounded-lg shadow-2xl w-1/2"
+			alt="Body shot of Daniel Tran"
+		/>
 	</div>
 </div>
