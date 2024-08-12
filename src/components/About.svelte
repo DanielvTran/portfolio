@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Images
-	import bodyshot from '../../static/bodyshot.jpeg';
+	import cycling from '../../static/cycling/dt_cycling.jpeg';
 	import resume from '../../static/resume.pdf';
 </script>
 
@@ -13,8 +13,8 @@
 			</div>
 
 			<p class="py-6 text-2xl text-primary">
-				I develop web applications with a focus on both frontend and backend technologies. Outside
-				of work, I enjoy an active lifestyle, particularly cycling.
+				I develop web applications with a focus on both frontend technologies. Outside of work, I
+				enjoy an active lifestyle, particularly cycling and a little bit of running.
 			</p>
 			<a
 				href={resume}
@@ -24,9 +24,9 @@
 			>
 		</div>
 		<img
-			src={bodyshot}
+			src={cycling}
 			class="max-w-sm rounded-lg shadow-2xl w-full"
-			alt="Body shot of Daniel Tran"
+			alt="Daniel Tran riding a road bike"
 		/>
 	</div>
 </div>
