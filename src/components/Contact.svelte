@@ -15,37 +15,49 @@
 		<form
 			method="POST"
 			use:enhance
-			class="bg-white p-10 rounded-2xl w-[60%] flex flex-col justify-between gap-10 items-center text-[#8A8A8A]"
+			class="bg-white p-10 rounded-2xl w-[70%] flex flex-col justify-between gap-10 items-center text-[#8A8A8A]"
 		>
 			<div class="name-input-container flex flex-row w-full justify-between gap-5">
 				<input
-					class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A]"
+					class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A] {$errors.firstName
+						? 'border-red-500 border-2 placeholder:text-red-500'
+						: ''}"
 					type="text"
 					name="firstName"
-					placeholder="First Name"
+					placeholder={$errors.firstName ? `${$errors.firstName}` : 'First Name'}
+					aria-invalid={$errors.firstName ? 'true' : undefined}
 					bind:value={$form.firstName}
 				/>
 				<input
-					class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A]"
+					class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A] {$errors.lastName
+						? 'border-red-500 border-2 placeholder:text-red-500'
+						: ''}"
 					type="text"
 					name="lastName"
-					placeholder="Last Name"
+					placeholder={$errors.lastName ? `${$errors.lastName}` : 'Last Name'}
+					aria-invalid={$errors.lastName ? 'true' : undefined}
 					bind:value={$form.lastName}
 				/>
 			</div>
 
 			<input
-				class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A]"
+				class="input w-full bg-[#E6E6E6] text-xl placeholder:text-[#8A8A8A] {$errors.email
+					? 'border-red-500 border-2 placeholder:text-red-500'
+					: ''}"
 				type="email"
 				name="email"
-				placeholder="Email"
+				placeholder={$errors.email ? `${$errors.email}` : 'Email'}
+				aria-invalid={$errors.email ? 'true' : undefined}
 				bind:value={$form.email}
 			/>
 
 			<textarea
-				class="input w-full bg-[#E6E6E6] text-xl h-40 p-4 placeholder:text-[#8A8A8A]"
+				class="input w-full bg-[#E6E6E6] text-xl h-40 p-4 placeholder:text-[#8A8A8A] {$errors.message
+					? 'border-red-500 border-2 placeholder:text-red-500'
+					: ''}"
 				name="message"
-				placeholder="Type your message here! 👌"
+				placeholder={$errors.message ? `${$errors.message}` : 'Type your message here! 👌'}
+				aria-invalid={$errors.message ? 'true' : undefined}
 				bind:value={$form.message}
 			></textarea>
 
