@@ -1,6 +1,7 @@
 <script lang="ts">
 	// Props
 	export let form;
+	export let message;
 	export let errors;
 	export let enhance;
 </script>

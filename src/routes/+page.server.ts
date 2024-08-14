@@ -13,18 +13,24 @@ export const load = async () => {
 export const actions = {
 	default: async ({ request }) => {
 		const form = await superValidate(request, zod(contactFormSchema));
-		console.log(form);
 
 		if (!form.valid) {
 			// Again, return { form } and things will just work.
-			return fail(400, { form });
+			return message(form, 'Failed: Invalid inputs, please try again. 😵‍💫', { status: 400 });
 		}
 
 		const response = await axios.post('http://localhost:5173/api/email', form);
 
-		// TODO: Do something with the validated form.data
+		if (response.status !== 200) {
+			return message(
+				form,
+				'Failed: Something went wrong while sending the message, please try again. 😵‍💫'
+			);
+		}
+
+		const data = response.data;
 
 		// Display a success status message
-		return message(form, 'Form posted successfully!');
+		return message(form, "Success: Message sent, i'll get back to you shortly! 👌");
 	}
 };

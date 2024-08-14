@@ -8,7 +8,7 @@
 	import typescript from '../../static/icons/typescript.svg';
 </script>
 
-<div class="hero bg-primary min-h-screen w-full">
+<div id="skills" class="hero bg-primary min-h-screen w-full">
 	<div class="hero-content w-full flex-col lg:flex-col">
 		<div class="w-fit">
 			<h1 class="text-5xl font-bold text-secondary">Skills</h1>

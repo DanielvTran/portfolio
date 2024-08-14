@@ -21,8 +21,11 @@
 	</nav>
 	<aside>
 		<span
-			><a target="_blank" href="https://icons8.com/icon/62925/linkedin-circled">LinkedIn Circled</a>
-			and <a target="_blank" href="https://icons8.com/icon/62856/github">GitHub</a> icons by
+			><a target="_blank" href="https://icons8.com/icon/62925/linkedin-circled">LinkedIn Circled,</a
+			>
+			<a target="_blank" href="https://icons8.com/icon/62856/github">GitHub</a> and,
+			<a target="_blank" href="https://icons8.com/icon/100508/slide-up">Slide Up</a>
+			icons by
 			<a target="_blank" href="https://icons8.com">Icons8</a></span
 		>
 	</aside>

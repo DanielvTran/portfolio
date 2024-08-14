@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Svelte
+	import { onMount } from 'svelte';
+
 	// Components
 	import Nav from '../components/Nav.svelte';
 	import Hero from '../components/Hero.svelte';
@@ -16,7 +19,7 @@
 	export let data: PageData;
 
 	// Create the form using superForm
-	const { form, errors, enhance } = superForm(data.form);
+	const { form, message, errors, enhance } = superForm(data.form);
 </script>
 
 <div class="flex flex-col w-full">
@@ -25,6 +28,13 @@
 	<About />
 	<Skills />
 	<Projects />
-	<Contact {form} {errors} {enhance} />
+	<Contact {form} {message} {errors} {enhance} />
 	<Footer />
+
+	<a href="#nav">
+		<span
+			class="material-symbols-outlined fixed right-5 bottom-5 z-50 px-2 py-2 bg-[#004ac2] text-white rounded hover:bg-[#003996] transition-colors duration-200"
+			>arrow_circle_up</span
+		>
+	</a>
 </div>

@@ -1,4 +1,4 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import { text, type RequestHandler } from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
 
 // Helper function to create JSON responses
@@ -11,9 +11,28 @@ const createJsonResponse = (message: string, data: object, status: number) => {
 	});
 };
 
-export const GET: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request }) => {
 	try {
-		//const { visitorName } = await request.json();
+		const { data } = await request.json();
+		const { firstName, lastName, email, message } = data;
+
+		// console.log('First Name:', firstName);
+		// console.log('Last Name:', lastName);
+		// console.log('Email:', email);
+		// console.log('Message:', message);
+
+		if (!firstName || !lastName || !email || !message) {
+			return createJsonResponse(
+				'Form values are undefined',
+				{
+					firstName: firstName,
+					lastName: lastName,
+					email: email,
+					message: message
+				},
+				400
+			);
+		}
 
 		// Setup transport configuration object
 		const transporter = nodemailer.createTransport({
@@ -30,14 +49,18 @@ export const GET: RequestHandler = async ({ request }) => {
 		const mailOptions = {
 			from: { name: 'Daniel Tran', address: import.meta.env.VITE_NODEMAILER_EMAIL },
 			to: import.meta.env.VITE_NODEMAILER_EMAIL,
-			// subject: `Thanks for reaching out ${visitorName}!`,
-			subject: `Thanks for reaching out!`
+			subject: `Thanks for reaching out ${firstName} ${lastName}! 😌`,
+			text: `Hi im ${firstName}, this is my messsage ${message} please contact me at ${email}`
 		};
 
 		// Send Email
-		const info = await transporter.sendMail(mailOptions);
+		const nodemailerResponse = await transporter.sendMail(mailOptions);
 
-		return createJsonResponse('Email sent successfully', { info: info.response }, 200);
+		return createJsonResponse(
+			'Email sent successfully',
+			{ nodemailerResponse: nodemailerResponse.response },
+			200
+		);
 	} catch (error: any) {
 		console.error('Error sending email:', error);
 		return createJsonResponse('Failed to send email', { error: error.message }, 500);
