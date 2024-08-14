@@ -11,12 +11,12 @@
 			<div class="quick-nav flex flex-row w-full gap-5">
 				<a
 					href="#projects"
-					class="btn btn-primary border-white bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold"
+					class="btn btn-primary border-white bg-secondary text-primary hover:text-gray-300 hover:bg-[#1871ca] hover:border-[#1871ca] font-bold"
 					>Projects</a
 				>
 				<a
 					href="#about"
-					class="btn btn-primary border-white bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold"
+					class="btn btn-primary border-white bg-secondary text-primary hover:text-gray-300 hover:bg-[#1871ca] hover:border-[#1871ca] font-bold"
 					>About Me</a
 				>
 			</div>
