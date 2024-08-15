@@ -19,10 +19,7 @@ export const actions = {
 			return message(form, 'Failed: Invalid inputs, please try again. 😵‍💫', { status: 400 });
 		}
 
-		const response = await axios.post(
-			'https://portfolio-7kqjrne92-daniel-trans-projects-841314e9.vercel.app/api/email',
-			form
-		);
+		const response = await axios.post('http://localhost:5173/api/email', form);
 
 		if (response.status !== 200) {
 			return message(
