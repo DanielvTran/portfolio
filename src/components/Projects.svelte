@@ -1,5 +1,5 @@
 <script lang="ts">
-	const projects = [1, 2, 3, 4, 5, 6];
+	import { projects } from '$lib';
 </script>
 
 <div id="projects" class="projects-container hero bg-secondary min-h-screen w-full">
@@ -9,26 +9,28 @@
 			<div class="border-2 my-5 border-primary"></div>
 		</div>
 
-		<div
-			class="projects-container-grid grid grid-cols-3 justify-between bg-white gap-6 px-4 py-4 w-full"
-		>
-			{#each projects as project}
-				<div class="card bg-[#F2F2F2] w-full border-4 border-primary py-2">
-					<figure>
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-							alt="Shoes"
-						/>
-					</figure>
-					<div class="card-body flex flex-col gap-4">
-						<h2 class="card-title">Shoes!</h2>
-						<p>If a dog chews shoes whose shoes does he choose?</p>
-						<div class="card-actions justify-center">
-							<button class="btn btn-primary">Buy Now</button>
+		{#each projects as project}
+			{#if project.title}
+				<div
+					class="projects-container-grid grid grid-cols-3 justify-between bg-white gap-6 px-4 py-4 w-full"
+				>
+					<div class="card bg-[#F2F2F2] w-full border-4 border-primary py-2">
+						<div class="card-body flex flex-col gap-4">
+							<h2 class="card-title">{project.title}</h2>
+							<img src={project.image} alt="Project 1" />
+							<p>{project.description}</p>
+							<div class="card-actions justify-center">
+								<button
+									class="btn btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold"
+									>View</button
+								>
+							</div>
 						</div>
 					</div>
 				</div>
-			{/each}
-		</div>
+			{:else}
+				<div class="notice font-bold">Coming Soon</div>
+			{/if}
+		{/each}
 	</div>
 </div>
