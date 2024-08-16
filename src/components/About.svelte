@@ -13,8 +13,8 @@
 			</div>
 
 			<p class="py-6 text-2xl text-primary">
-				I develop web applications with a focus on both frontend technologies. Outside of work, I
-				enjoy an active lifestyle, particularly cycling and a little bit of running.
+				I develop web applications with a focus on frontend technologies. Outside of work, I enjoy
+				an active lifestyle, particularly cycling and a little bit of running. Check out my CV.
 			</p>
 			<a
 				href={resume}

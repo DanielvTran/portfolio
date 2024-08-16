@@ -16,10 +16,10 @@
 	import { superForm } from 'sveltekit-superforms/client';
 
 	// Get the form data from the load function
-	export let data: PageData;
+	// export let data: PageData;
 
 	// Create the form using superForm
-	const { form, message, errors, enhance } = superForm(data.form);
+	// const { form, message, errors, enhance } = superForm(data.form);
 </script>
 
 <div class="flex flex-col w-full">
@@ -28,7 +28,7 @@
 	<About />
 	<Skills />
 	<Projects />
-	<Contact {form} {message} {errors} {enhance} />
+	<!-- <Contact {form} {message} {errors} {enhance} /> -->
 	<Footer />
 
 	<a href="#nav">

@@ -6,7 +6,7 @@
 <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
 	<nav class="grid grid-flow-col gap-4">
 		<a class="link link-hover" href="#about">About me</a>
-		<a class="link link-hover" href="#contact">Contact</a>
+		<!-- <a class="link link-hover" href="#contact">Contact</a> -->
 		<a class="link link-hover" href="#projects">Projects</a>
 	</nav>
 	<nav>

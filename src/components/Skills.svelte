@@ -15,8 +15,10 @@
 			<div class="border-2 my-5 border-secondary"></div>
 		</div>
 		<p class="py-6 text-2xl text-secondary text-center">
-			Most of my web development skills were honed during my university studies and internships.
-			I've gained experience in both frontend and backend technologies through real-world projects.
+			After university I worked as a full stack web developer for around 8 months. Throughout these
+			8 months I have been exposed to many new libraries such as bunny.net, sendgrid, pdf-lib etc.
+			Also working with these libraries allowed to to refine my use of REST apis. The below shows
+			the main technologies and frameworks that I have used.
 		</p>
 
 		<div class="skills-icon-container flex flex-row gap-10">
