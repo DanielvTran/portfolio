@@ -15,10 +15,10 @@
 			<div class="border-2 my-5 border-secondary"></div>
 		</div>
 		<p class="py-6 text-2xl text-secondary text-center">
-			After university I worked as a full stack web developer for around 8 months. Throughout these
-			8 months I have been exposed to many new libraries such as bunny.net, sendgrid, pdf-lib etc.
-			Also working with these libraries allowed to to refine my use of REST apis. The below shows
-			the main technologies and frameworks that I have used.
+			After university, I worked as a full-stack web developer for around 8 months. Throughout these
+			8 months, I was exposed to many new libraries such as bunny.net, SendGrid, pdf-lib, etc. This
+			exposure has allowed me to enhance my implementation skills to work seamlessly with each
+			other. Below are the main technologies and frameworks that I have used.
 		</p>
 
 		<div class="skills-icon-container flex flex-row gap-10">

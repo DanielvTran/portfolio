@@ -7,7 +7,7 @@
 			<li><a href="#about" class="text-primary font-bold">About</a></li>
 			<li><a href="#skills" class="text-primary font-bold">Skills</a></li>
 			<li><a href="#projects" class="text-primary font-bold">Projects</a></li>
-			<li><a href="#contact" class="text-primary font-bold">Contacts</a></li>
+			<!-- <li><a href="#contact" class="text-primary font-bold">Contacts</a></li> -->
 		</ul>
 	</div>
 </div>
