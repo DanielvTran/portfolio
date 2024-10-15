@@ -5,7 +5,11 @@
 <div id="projects" class="projects-container hero bg-secondary min-h-screen w-full">
 	<div class="hero-content w-full flex-col lg:flex-col">
 		<div class="w-fit">
-			<h1 class="text-5xl font-bold text-primary">Projects</h1>
+			<h1
+				class="text-5xl font-bold text-primary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl"
+			>
+				Projects
+			</h1>
 			<div class="border-2 my-5 border-primary"></div>
 		</div>
 
@@ -29,7 +33,11 @@
 					</div>
 				</div>
 			{:else}
-				<div class="notice font-bold">Coming Soon</div>
+				<div
+					class="notice font-bold text-2xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-md sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+				>
+					Coming Soon
+				</div>
 			{/if}
 		{/each}
 	</div>
