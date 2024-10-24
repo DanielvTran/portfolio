@@ -4,7 +4,7 @@
 </script>
 
 <footer
-	class="footer footer-center bg-base-200 text-base-content rounded p-10 3xl:text-lg 2xl:text-lg xl:text-md md:text-xs sm:text-xs xs:text-xs"
+	class="footer footer-center bg-base-200 text-base-content rounded p-10 3xl:text-lg 2xl:text-lg xl:text-md md:text-xs sm:text-xs"
 >
 	<nav class="grid grid-flow-col gap-4">
 		<a class="link link-hover" href="#about">About me</a>
