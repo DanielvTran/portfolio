@@ -6,7 +6,7 @@ export type Project = {
 	planningImages: string[];
 	demoDescription: string;
 	demoVideo: string;
-	obstacles: string;
+	obstacles: string[];
 	summary: string;
 	image: string;
 	sourceCodeLink: string;

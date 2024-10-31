@@ -26,12 +26,12 @@
 
 <div class="carousel-container relative flex flex-col items-center my-10">
 	<div
-		class="carousel-images flex justify-center items-center overflow-hidden w-4/5 rounded-lg shadow-2xl"
+		class="carousel-images flex justify-center items-center overflow-hidden w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-2xl"
 	>
 		{#if images.length > 0}
 			<img
 				src={images[currentIndex]}
-				class="p-2 border-4 border-primary bg-white w-full transition ease-in-out duration-500"
+				class="p-2 border-4 border-primary bg-white w-full h-auto max-h-[80vh] object-cover transition ease-in-out duration-500"
 				alt={`Carousel image ${currentIndex + 1}`}
 			/>
 		{:else}

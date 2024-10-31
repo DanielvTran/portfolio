@@ -99,11 +99,14 @@
 				>
 					Obstacles
 				</p>
-				<p
-					class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
-				>
-					{project.obstacles}
-				</p>
+
+				{#each project.obstacles as obstacle}
+					<p
+						class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+					>
+						{obstacle}
+					</p>
+				{/each}
 
 				<p
 					class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
