@@ -4,7 +4,9 @@
 </script>
 
 <div id="hero" class="hero bg-primary min-h-screen w-full py-10 xs:py-5">
-	<div class="hero-content w-full flex flex-col lg:flex-row items-center justify-center lg:gap-10">
+	<div
+		class="hero-content w-full flex flex-col lg:flex-row items-center justify-center lg:gap-10 px-4 xs:px-2"
+	>
 		<div class="text-center lg:text-left w-full flex flex-col items-center lg:items-start gap-6">
 			<h1 class="text-5xl font-bold text-secondary lg:text-6xl md:text-5xl sm:text-4xl xs:text-3xl">
 				Hi my name is Daniel Tran! 🙌
@@ -29,7 +31,7 @@
 		</div>
 		<img
 			src={bodyshot}
-			class="max-w-sm rounded-lg shadow-2xl lg:max-w-md md:max-w-sm sm:max-w-xs xs:max-w-[80%] mt-6 lg:mt-0"
+			class="max-w-xs sm:max-w-[60%] rounded-lg shadow-2xl mt-6 lg:mt-0"
 			alt="Body shot of Daniel Tran"
 		/>
 	</div>
