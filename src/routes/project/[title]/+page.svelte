@@ -77,6 +77,13 @@
 
 				<Carousel images={project.planningImages} />
 
+				<a
+					href={project.figmaFile}
+					download="figma-file"
+					class="btn btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs"
+					>Figma File</a
+				>
+
 				<p
 					class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
 				>

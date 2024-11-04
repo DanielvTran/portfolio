@@ -2,6 +2,7 @@ export type Project = {
 	title: string;
 	description: string;
 	overview: string;
+	figmaFile: string;
 	planningDescription: string;
 	planningImages: string[];
 	demoDescription: string;

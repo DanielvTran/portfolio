@@ -29,6 +29,7 @@ export const projects: Record<string, Project> = {
 		description: 'Created using Svelte',
 		overview:
 			'The goal of this project was to build a clean, aesthetically appealing personal portfolio website designed to showcase my skills, projects, and professional experiences. I focused on creating a user-friendly and visually engaging platform that highlights my expertise as a web developer, using modern design principles and smooth, responsive layouts.',
+		figmaFile: '../../static/portfolio/figma/personalWebsiteFigma.fig',
 		planningDescription:
 			"When designing my personal website, I start by prototyping. This involves selecting the color scheme, defining the page structure, and creating initial layouts, which you can see in the image carousel below. Once the design is set, I begin development by focusing on a specific screen size. I create all the pages based on that size, ensuring the design aligns with my vision. If it doesn’t, I revisit Figma for further adjustments—there were quite a few iterations along the way! 😅 Once I'm satisfied with the design, I proceed to make it responsive across major screen sizes: 370px, 450px, 640px, 768px, 1024px, 1280px, 1536px, and 1972px. This approach ensures a consistent and polished experience across all devices.",
 		planningImages: [
@@ -54,9 +55,10 @@ export const projects: Record<string, Project> = {
 	},
 	'to-do-list': {
 		title: 'To-Do List',
-		description: 'Built with React, Express, and Mongoose',
+		description: 'Built with React, Express, and MongoDB',
 		overview:
 			'This project aimed to create a simple yet effective To-Do List application to manage tasks. The focus was on building a clean, user-friendly interface that allows users to add, edit, and delete tasks seamlessly. The application demonstrates full CRUD functionality and uses a responsive design to ensure usability across devices.',
+		figmaFile: '../../static/portfolio/figma/toDoListFigma.fig',
 		planningDescription:
 			'Similar to many of my other web development projects, I usually start with the theme, and structure of the application. This is generated using Figma, which I am still learning how to use. For this project, I had a initial design idea, however, as I was developing and implementing it, it did not look as great. Therefore there is a slight change in design structure in the final design, which can be seen in the demo.',
 		planningImages: [
