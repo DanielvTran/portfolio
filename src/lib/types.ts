@@ -3,13 +3,13 @@ export type Project = {
 	description: string;
 	overview: string;
 	figmaFile: string;
-	planningDescription: string;
+	planningDescriptions: string[];
 	planningImages: string[];
 	demoDescription: string;
 	demoVideo: string;
 	obstacles: string[];
 	summary: string;
-	image: string;
+	thumbnail: string;
 	sourceCodeLink: string;
 	slug: string;
 };

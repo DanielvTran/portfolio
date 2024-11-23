@@ -31,11 +31,11 @@
 								{project.title}
 							</h2>
 							<img
-								src={project.image}
+								src={project.thumbnail}
 								alt="Project {project.title}"
 								class="max-w-full rounded-md"
 							/>
-							<p class="text-center text-primary font-bold xxs:text-xs">{project.description}</p>
+							<p class="text-center text-primary font-bold xxs:text-md">{project.description}</p>
 							<div class="card-actions justify-center">
 								<a
 									href={`/project/${project.slug}`}

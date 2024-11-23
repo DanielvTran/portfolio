@@ -48,7 +48,7 @@
 				</div>
 
 				<img
-					src={project.image}
+					src={project.thumbnail}
 					class="border-4 border-gray-400 max-w-sm rounded-lg shadow-2xl 3xl:max-w-[100%] 2xl:max-w-[100%] xl:max-w-[80%] lg:max-w-[80%] md:max-w-[80%] md:mt-6 sm:max-w-[80%] sm:mt-6 xs:max-w-[80%] xs:mt-4 xxs:max-w-[80%] xxs:mt-8"
 					alt={`Thumbnail of ${project.title}`}
 				/>
@@ -69,11 +69,14 @@
 				>
 					Planning
 				</p>
-				<p
-					class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
-				>
-					{project.planningDescription}
-				</p>
+
+				{#each project.planningDescriptions as planningDescription}
+					<p
+						class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+					>
+						{planningDescription}
+					</p>
+				{/each}
 
 				<Carousel images={project.planningImages} />
 
