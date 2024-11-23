@@ -20,20 +20,20 @@ import todolistDesignFigma3 from '../../static/portfolio/planning/todolist/todol
 import todolistDesignFigma4 from '../../static/portfolio/planning/todolist/todolistDesign4.png';
 import todolistDesignFigma5 from '../../static/portfolio/planning/todolist/todolistDesign5.png';
 
-import personalFinanceManagerFigma1 from '../../static/portfolio/planning/personalFinanceManager/design1.png';
-import personalFinanceManagerFigma2 from '../../static/portfolio/planning/personalFinanceManager/design2.png';
-import personalFinanceManagerFigma3 from '../../static/portfolio/planning/personalFinanceManager/design3.png';
-import personalFinanceManagerFigma4 from '../../static/portfolio/planning/personalFinanceManager/design4.png';
-import personalFinanceManagerFigma5 from '../../static/portfolio/planning/personalFinanceManager/design5.png';
-import personalFinanceManagerFigma6 from '../../static/portfolio/planning/personalFinanceManager/design6.png';
-import personalFinanceManagerFigma7 from '../../static/portfolio/planning/personalFinanceManager/design7.png';
-import personalFinanceManagerFigma8 from '../../static/portfolio/planning/personalFinanceManager/design8.png';
-import personalFinanceManagerFigma9 from '../../static/portfolio/planning/personalFinanceManager/design9.png';
-import personalFinanceManagerFigma10 from '../../static/portfolio/planning/personalFinanceManager/design10.png';
-import personalFinanceManagerFigma11 from '../../static/portfolio/planning/personalFinanceManager/design11.png';
-import personalFinanceManagerFigma12 from '../../static/portfolio/planning/personalFinanceManager/design12.png';
-import personalFinanceManagerFigma13 from '../../static/portfolio/planning/personalFinanceManager/design13.png';
-import personalFinanceManagerFigma14 from '../../static/portfolio/planning/personalFinanceManager/design14.png';
+import personalFinanceManagerFigma1 from '../../static/portfolio/planning/personalfinancemanager/design1.png';
+import personalFinanceManagerFigma2 from '../../static/portfolio/planning/personalfinancemanager/design2.png';
+import personalFinanceManagerFigma3 from '../../static/portfolio/planning/personalfinancemanager/design3.png';
+import personalFinanceManagerFigma4 from '../../static/portfolio/planning/personalfinancemanager/design4.png';
+import personalFinanceManagerFigma5 from '../../static/portfolio/planning/personalfinancemanager/design5.png';
+import personalFinanceManagerFigma6 from '../../static/portfolio/planning/personalfinancemanager/design6.png';
+import personalFinanceManagerFigma7 from '../../static/portfolio/planning/personalfinancemanager/design7.png';
+import personalFinanceManagerFigma8 from '../../static/portfolio/planning/personalfinancemanager/design8.png';
+import personalFinanceManagerFigma9 from '../../static/portfolio/planning/personalfinancemanager/design9.png';
+import personalFinanceManagerFigma10 from '../../static/portfolio/planning/personalfinancemanager/design10.png';
+import personalFinanceManagerFigma11 from '../../static/portfolio/planning/personalfinancemanager/design11.png';
+import personalFinanceManagerFigma12 from '../../static/portfolio/planning/personalfinancemanager/design12.png';
+import personalFinanceManagerFigma13 from '../../static/portfolio/planning/personalfinancemanager/design13.png';
+import personalFinanceManagerFigma14 from '../../static/portfolio/planning/personalfinancemanager/design14.png';
 
 // Demo
 import personalWebsiteDemo from '../../static/portfolio/demo/personalWebsiteDemo.mov';
@@ -128,10 +128,10 @@ export const projects: Record<string, Project> = {
 			personalFinanceManagerFigma14
 		],
 		demoDescription:
-			'This demo walks through the main features of the To-Do List app, showing how tasks can be created, edited, completed, and deleted. It highlights the responsive design and user-friendly interactions for efficient task management.',
+			'This demo walks through the main features of the Personal Finance Manager app, showing the tracking of income, expenses, budgets, categories, and reports visualisation.',
 		demoVideo: todolistDemo,
 		obstacles: [
-			'One major challenge I encountered was my limited understanding of the Context API in React. Initially, managing state across components was difficult, as I struggled to grasp the best practices for efficient state management. Through research and experimentation, I was able to implement the Context API, which significantly improved the way state was shared across components.',
+			"A big challenge of this application, was the authentication, specifically protecting the routes. Although, I have done this in my To-Do-List app it checked the tokens on every page load causing a little bit of repetitive code. While for this application, I wanted to make use of the middleware, to check the application for valid tokens whenever the user navigates to specified pages. However, I thought the middleware.ts file had to be in the 'root' of a nextjs project, which was incorrect. So, I was stuck in the cycle of trying to make it work at the 'root' of the project, when that is not even possible. I finally realised that it was supposed to go in the root of '/src'.",
 			"Another significant hurdle was designing a user-friendly interface for mobile screens. The initial layout didn't adapt well to smaller devices, so I had to rethink my approach using CSS Flexbox and media queries. This involved careful consideration of how elements should reflow on different screen sizes to ensure a seamless experience.",
 			"Lastly, the app's initial design didn’t turn out as expected. The original vision didn't align with the functionality and user experience I wanted to achieve, so I made the tough decision to redesign it. This experience taught me the importance of flexibility in design and that sometimes, starting over is necessary to create a product that truly meets user needs."
 		],

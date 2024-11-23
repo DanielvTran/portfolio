@@ -83,7 +83,7 @@
 				<a
 					href={project.figmaFile}
 					download="figma-file"
-					class="btn btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs"
+					class="btn mb-5 btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs"
 					>Figma File</a
 				>
 
@@ -98,7 +98,7 @@
 					{project.demoDescription}
 				</p>
 
-				<video controls width="600">
+				<video controls width="600" class="mb-5">
 					<track kind="captions" />
 					<source src={project.demoVideo} type="video/mp4" />
 					Your browser does not support the video tag.
