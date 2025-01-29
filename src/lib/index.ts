@@ -1,9 +1,10 @@
-import type { Project } from './types';
+import type { Project, JobExperiences } from './types';
 
 // Thumbnails
 import todolistThumbnail from '../../static/portfolio/thumbnails/todolistThumbnail.png';
 import personalWebsiteThumbnail from '../../static/portfolio/thumbnails/personalWebsiteThumbnail.png';
 import mintyPlanThumbnail from '../../static/portfolio/thumbnails/mintyPlanThumbnail.png';
+import qaTestingPlaywrightThumbnail from '../../static/portfolio/thumbnails/qaTestingPlaywrightThumbnail.png';
 
 // Planning
 import personalWebsiteFigma1 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign1.png';
@@ -38,6 +39,7 @@ import personalFinanceManagerFigma14 from '../../static/portfolio/planning/perso
 // Demo
 import personalWebsiteDemo from '../../static/portfolio/demo/personalWebsiteDemo.mov';
 import todolistDemo from '../../static/portfolio/demo/todolistDemo.mov';
+import qaTestingPlaywrightDemo from '../../static/portfolio/demo/qaTestingPlaywrightDemo.mov';
 
 export const projects: Record<string, Project> = {
 	'personal-website': {
@@ -140,5 +142,58 @@ export const projects: Record<string, Project> = {
 		thumbnail: mintyPlanThumbnail,
 		sourceCodeLink: '',
 		slug: 'personal-finance-manager'
+	},
+	'qa-testing-playwright': {
+		title: 'QA Testing Playwright',
+		description: 'Test Hacker News with Playwright',
+		overview:
+			'This is a project to try out qa end-to-end testing with Playwright. The goal is to test the Hacker News website to see if the website is working as expected. The tests include checking if the website is displaying the new articles from newest to oldest, if the links of the articles go to the right url and displays the right content, and if the css are displaying correctly.',
+		figmaFile: '../../static/portfolio/figma/personalFinanceManagerFigma.fig',
+		planningDescriptions: [],
+		planningImages: [],
+		demoDescription:
+			'This demo walks through the test cases that I have created for the Hacker News website. It shows the the use of playwright ui to run the tests and show the results of the tests.',
+		demoVideo: qaTestingPlaywrightDemo,
+		obstacles: [
+			'Although, I have done some unit testing junit for java, I have never done any end-to-end testing. I decided to do end-to-end testing as, I have never really done this before so I wanted to learn something new. It took me a while to understand the syntax of playwright, and its methods for testing, such as using elements and its roles to identify them. However, I was able to get the hang of it after a while, using their documentation and examples.',
+			'There, were some issues where I had to make sure that I used a very unique selector for the elements, as the elements on the website were not very unique. This was a bit of a challenge, so I had to look deep into the structure of the website to make sure that I am grabbing the right elements.'
+		],
+		summary:
+			'For my first time doing end-to-end testing, I think I did a pretty good job. I was able to test some of the major sections of the website and see if it was working as expected. I learned a lot about playwright and how to use locators effectively and uniquely. I plan to incorporate more end-to-end testing with my current projects and, I would also like to make use of CI/CD workflows such as github actions to make sure that my repository is robust, as it is a very important part of any development.',
+		thumbnail: qaTestingPlaywrightThumbnail,
+		sourceCodeLink: '',
+		slug: 'qa-testing-playwright'
+	}
+};
+
+export const jobExperiences: Record<string, JobExperiences> = {
+	'kashy-australia': {
+		startDate: 'January 2024',
+		endDate: 'Present',
+		position: 'Frontend Web Developer',
+		company: 'Kashy Australia',
+		description:
+			'At this role I was responsible for designing the webpage using figma, and also creating the frontend of the internal operations side of the website.',
+		responsibilities: [
+			'Created mock ups with figma for a website that handles internal operations of the company.',
+			'Implemented the mockup with regular reviews from clients for improvement.',
+			'Added functionality to manage and organise data, enabling streamlined processes for 8000+ customer records and inventory management of car parts and services.',
+			'Connected the internal operations website to Xero SDK allowing users to perform internal operations. These operations include customer contact creation and invoice creation.'
+		]
+	},
+	'creator-camp': {
+		startDate: 'January 2024',
+		endDate: 'August 2024',
+		position: 'Frontend Web Developer',
+		company: 'Creator Camp',
+		description:
+			'I was responsible for developing and maintaining the internal operations of the frontend application, ensuring seamless functionality, and an intuitive user interface.',
+		responsibilities: [
+			'Transformed Figma designs into responsive web pages using Tailwind CSS, ensuring a seamless user experience.',
+			'Developed a video uploader with Bunny.net CDN that streamlined daily uploads of 100+ videos, reducing transfer time by 90%. Automated video organization by camp location, type, and date, boosting staff productivity.',
+			'Created a QR code-based check-in/check-out system, streamlining attendance tracking and reducing check-in/check-out time, improving recording accuracy.',
+			"Developed a photo uploader designed in Figma, using Svelte and Tailwind for the UI, and implemented functionality with Firebase's byte upload functions.",
+			'Built an automated email endpoint with SendGrid and Day.js, scheduling communications from Firebase data, reducing manual handling, and ensuring timely updates for parents and staff.'
+		]
 	}
 };

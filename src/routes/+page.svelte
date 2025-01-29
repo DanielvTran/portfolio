@@ -3,13 +3,14 @@
 	import { onMount } from 'svelte';
 
 	// Components
-	import Nav from '../components/Nav.svelte';
-	import Hero from '../components/Hero.svelte';
-	import About from '../components/About.svelte';
-	import Skills from '../components/Skills.svelte';
-	import Projects from '../components/Projects.svelte';
-	// import Contact from '../components/Contact.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Nav from '../pages/Nav.svelte';
+	import Hero from '../pages/Hero.svelte';
+	import About from '../pages/About.svelte';
+	import Experience from '../pages/Experience.svelte';
+	import Skills from '../pages/Skills.svelte';
+	import Projects from '../pages/Projects.svelte';
+	// import Contact from '../pages/Contact.svelte';
+	import Footer from '../pages/Footer.svelte';
 
 	// SuperForm
 	import type { PageData } from './$types';
@@ -26,6 +27,7 @@
 	<Nav />
 	<Hero />
 	<About />
+	<Experience />
 	<Skills />
 	<Projects />
 	<!-- <Contact {form} {message} {errors} {enhance} /> -->

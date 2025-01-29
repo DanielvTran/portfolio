@@ -13,3 +13,12 @@ export type Project = {
 	sourceCodeLink: string;
 	slug: string;
 };
+
+export type JobExperiences = {
+	startDate: string;
+	endDate: string;
+	position: string;
+	company: string;
+	description: string;
+	responsibilities: string[];
+};

@@ -64,28 +64,30 @@
 					{project.overview}
 				</p>
 
-				<p
-					class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
-				>
-					Planning
-				</p>
-
-				{#each project.planningDescriptions as planningDescription}
+				{#if project.planningDescriptions.length > 0}
 					<p
-						class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+						class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
 					>
-						{planningDescription}
+						Planning
 					</p>
-				{/each}
 
-				<Carousel images={project.planningImages} />
+					{#each project.planningDescriptions as planningDescription}
+						<p
+							class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+						>
+							{planningDescription}
+						</p>
+					{/each}
 
-				<a
-					href={project.figmaFile}
-					download="figma-file"
-					class="btn mb-5 btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs"
-					>Figma File</a
-				>
+					<Carousel images={project.planningImages} />
+
+					<a
+						href={project.figmaFile}
+						download="figma-file"
+						class="btn mb-5 btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs"
+						>Figma File</a
+					>
+				{/if}
 
 				<p
 					class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
@@ -93,7 +95,7 @@
 					Demo
 				</p>
 				<p
-					class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+					class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center mb-5"
 				>
 					{project.demoDescription}
 				</p>
@@ -112,14 +114,14 @@
 
 				{#each project.obstacles as obstacle}
 					<p
-						class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
+						class="pt-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
 					>
 						{obstacle}
 					</p>
 				{/each}
 
 				<p
-					class="font-bold py-6 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
+					class="font-bold pt-10 text-2xl text-primary 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl sm:text-xl xs:text-xl xs:pb-2"
 				>
 					Summary
 				</p>
