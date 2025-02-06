@@ -13,8 +13,8 @@
 	import Footer from '../pages/Footer.svelte';
 
 	// SuperForm
-	import type { PageData } from './$types';
-	import { superForm } from 'sveltekit-superforms/client';
+	// import type { PageData } from './$types';
+	// import { superForm } from 'sveltekit-superforms/client';
 
 	// Get the form data from the load function
 	// export let data: PageData;
