@@ -1,4 +1,4 @@
-import type { Project, JobExperiences } from './types';
+import type { Project, JobExperiences, SocialLinks } from './types';
 
 // Thumbnails
 import todolistThumbnail from '../../static/portfolio/thumbnails/todolistThumbnail.png';
@@ -195,5 +195,23 @@ export const jobExperiences: Record<string, JobExperiences> = {
 			"Developed a photo uploader designed in Figma, using Svelte and Tailwind for the UI, and implemented functionality with Firebase's byte upload functions.",
 			'Built an automated email endpoint with SendGrid and Day.js, scheduling communications from Firebase data, reducing manual handling, and ensuring timely updates for parents and staff.'
 		]
+	}
+};
+
+export const socialLinks: Record<string, SocialLinks> = {
+	github: {
+		icon: 'fa-brands fa-github',
+		social: 'github',
+		link: 'https://github.com/DanielvTran'
+	},
+	email: {
+		icon: 'fa-solid fa-envelope',
+		social: 'email',
+		link: 'danieltran.softwaredev@gmail.com'
+	},
+	linkedin: {
+		icon: 'fa-brands fa-linkedin',
+		social: 'linkedin',
+		link: 'https://www.linkedin.com/in/daniel-tran-19a9b4225/'
 	}
 };

@@ -22,3 +22,9 @@ export type JobExperiences = {
 	description: string;
 	responsibilities: string[];
 };
+
+export type SocialLinks = {
+	icon: string;
+	social: string;
+	link: string;
+};

@@ -1,9 +1,13 @@
 <script lang="ts">
-	import { cubicOut } from 'svelte/easing';
 	import { slide, scale, fade } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 	import { onMount, tick } from 'svelte';
+	import { socialLinks } from '$lib';
+
 	// Images
 	import bodyshot from '../../static/bodyshot.jpeg';
+
+	const socialLists = Object.values(socialLinks);
 
 	let showAnimation = false;
 
@@ -52,12 +56,43 @@
 					</a>
 				</div>
 			</div>
-			<img
-				src={bodyshot}
-				class="max-w-xs sm:max-w-[30%] rounded-lg shadow-2xl mt-6 lg:mt-0 transition-transform duration-300 scale-90 hover:scale-100"
-				alt="Body shot of Daniel Tran"
-				in:scale={{ delay: 1500, duration: 500, easing: cubicOut, start: 0.5 }}
-			/>
+			<div class="max-w-xs sm:max-w-[30%] w-full">
+				<img
+					src={bodyshot}
+					class="rounded-lg shadow-2xl mt-6 lg:mt-0 transition-transform duration-300 scale-90 hover:scale-100"
+					alt="Body shot of Daniel Tran"
+					in:scale={{ delay: 1500, duration: 500, easing: cubicOut, start: 0.5 }}
+				/>
+				<div class="socials flex justify-evenly w-full mt-4">
+					<a
+						href="https://github.com/DanielvTran"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-3xl text-white transition-transform duration-300 hover:scale-[1.2]"
+						in:scale={{ delay: 1200, duration: 500, easing: cubicOut, start: 0.5 }}
+					>
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a
+						href="mailto:danieltran.softwaredev@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-3xl text-white transition-transform duration-300 hover:scale-[1.2]"
+						in:scale={{ delay: 1400, duration: 500, easing: cubicOut, start: 0.5 }}
+					>
+						<i class="fa-solid fa-envelope"></i>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/daniel-tran-19a9b4225/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-3xl text-white transition-transform duration-300 hover:scale-[1.2]"
+						in:scale={{ delay: 1600, duration: 500, easing: cubicOut, start: 0.5 }}
+					>
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+				</div>
+			</div>
 		</div>
 	{/if}
 </div>
