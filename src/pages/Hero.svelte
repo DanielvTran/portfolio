@@ -17,13 +17,13 @@
 			<div class="quick-nav flex flex-row gap-5 justify-center lg:justify-start">
 				<a
 					href="#projects"
-					class="btn btn-primary bg-secondary text-primary hover:text-gray-300 hover:bg-[#1871ca] hover:border-[#1871ca] font-bold text-lg px-6 py-3 xs:px-2 xs:py-1 xs:text-sm"
+					class="btn btn-secondary border-secondary bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-4xl 2xl:text-3xl xl:text-xl lg:text-0 xs:text-xs xxs:text-xs transition-transform duration-300 hover:scale-110"
 				>
 					Projects
 				</a>
 				<a
 					href="#about"
-					class="btn btn-primary bg-secondary text-primary hover:text-gray-300 hover:bg-[#1871ca] hover:border-[#1871ca] font-bold text-lg px-6 py-3 xs:px-2 xs:py-1 xs:text-sm"
+					class="btn btn-secondary border-secondary bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-4xl 2xl:text-3xl xl:text-xl lg:text-0 xs:text-xs xxs:text-xs transition-transform duration-300 hover:scale-110"
 				>
 					About Me
 				</a>
@@ -31,7 +31,7 @@
 		</div>
 		<img
 			src={bodyshot}
-			class="max-w-xs sm:max-w-[60%] rounded-lg shadow-2xl mt-6 lg:mt-0"
+			class="max-w-xs sm:max-w-[30%] rounded-lg shadow-2xl mt-6 lg:mt-0 transition-transform duration-300 scale-90 hover:scale-100"
 			alt="Body shot of Daniel Tran"
 		/>
 	</div>

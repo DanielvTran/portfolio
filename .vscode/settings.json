@@ -6,5 +6,6 @@
 		"personalwebsite",
 		"superforms",
 		"todolist"
-	]
+	],
+	"postman.settings.dotenv-detection-notification-visibility": false
 }
