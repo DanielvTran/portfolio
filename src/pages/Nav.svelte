@@ -3,12 +3,12 @@
 	import { scale } from 'svelte/transition';
 	import { onMount, tick } from 'svelte';
 
-	let showNav = false;
+	let showAnimation = false;
 
 	// Wait for the page to fully load, then enable animations
 	onMount(async () => {
 		await tick();
-		showNav = true;
+		showAnimation = true;
 	});
 
 	// Staggered animation delays for smooth entry
@@ -17,7 +17,7 @@
 
 <div id="nav" class="navbar w-full bg-secondary px-[10%] py-4 md:py-2 sm:px-[6%] xxs:px-[4%]">
 	<div class="flex-1">
-		{#if showNav}
+		{#if showAnimation}
 			<p
 				in:scale={{ delay: delays[0], duration: 700, easing: cubicOut, start: 0.5 }}
 				class="text-primary font-bold text-2xl lg:text-xl md:text-lg sm:text-base xxs:text-sm"
@@ -28,7 +28,7 @@
 	</div>
 	<div class="flex-none">
 		<ul class="flex gap-20 text-xl lg:text-lg md:text-md sm:text-sm xxs:text-xs">
-			{#if showNav}
+			{#if showAnimation}
 				<li in:scale={{ delay: delays[1], duration: 700, easing: cubicOut, start: 0.5 }}>
 					<a
 						href="#about"
