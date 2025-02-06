@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { cubicOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { onMount, tick } from 'svelte';
@@ -13,6 +13,19 @@
 
 	// Staggered animation delays for smooth entry
 	let delays = [100, 200, 300, 400, 500];
+
+	// Smooth Scroll on navigation
+	function smoothScroll(event: Event, targetId: string) {
+		event.preventDefault();
+
+		const targetElement = document.querySelector(targetId) as HTMLElement | null;
+		if (targetElement) {
+			window.scrollTo({
+				top: targetElement.offsetTop,
+				behavior: 'smooth'
+			});
+		}
+	}
 </script>
 
 <div id="nav" class="navbar w-full bg-secondary px-[10%] py-4 md:py-2 sm:px-[6%] xxs:px-[4%]">
@@ -33,13 +46,16 @@
 					<a
 						href="#about"
 						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
-						>About</a
+						on:click={(e) => smoothScroll(e, '#about')}
 					>
+						About
+					</a>
 				</li>
 				<li in:scale={{ delay: delays[2], duration: 700, easing: cubicOut, start: 0.5 }}>
 					<a
 						href="#experiences"
 						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
+						on:click={(e) => smoothScroll(e, '#experiences')}
 					>
 						Experiences
 					</a>
@@ -48,15 +64,19 @@
 					<a
 						href="#skills"
 						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
-						>Skills</a
+						on:click={(e) => smoothScroll(e, '#skills')}
 					>
+						Skills
+					</a>
 				</li>
 				<li in:scale={{ delay: delays[4], duration: 700, easing: cubicOut, start: 0.5 }}>
 					<a
 						href="#projects"
 						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
-						>Projects</a
+						on:click={(e) => smoothScroll(e, '#projects')}
 					>
+						Projects
+					</a>
 				</li>
 			{/if}
 		</ul>
