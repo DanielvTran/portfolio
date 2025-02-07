@@ -29,6 +29,7 @@
 						slug={project.slug}
 						thumbnail={project.thumbnail}
 						description={project.description}
+						sourceCodeLink={project.sourceCodeLink}
 					/>
 				{:else}
 					<div

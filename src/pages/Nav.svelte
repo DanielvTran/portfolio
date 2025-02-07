@@ -2,6 +2,7 @@
 	import { cubicOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { onMount, tick } from 'svelte';
+	import { smoothScroll } from '$lib';
 
 	let showAnimation = false;
 
@@ -13,19 +14,6 @@
 
 	// Staggered animation delays for smooth entry
 	let delays = [100, 200, 300, 400, 500];
-
-	// Smooth Scroll on navigation
-	function smoothScroll(event: Event, targetId: string) {
-		event.preventDefault();
-
-		const targetElement = document.querySelector(targetId) as HTMLElement | null;
-		if (targetElement) {
-			window.scrollTo({
-				top: targetElement.offsetTop,
-				behavior: 'smooth'
-			});
-		}
-	}
 </script>
 
 <div id="nav" class="navbar w-full bg-secondary px-[10%] py-4 md:py-2 sm:px-[6%] xxs:px-[4%]">

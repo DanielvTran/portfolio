@@ -3,6 +3,7 @@
 	import { cubicOut } from 'svelte/easing';
 	import { onMount, tick } from 'svelte';
 	import { socialLinks } from '$lib';
+	import { smoothScroll } from '$lib';
 
 	// Images
 	import bodyshot from '../../static/bodyshot.jpeg';
@@ -43,6 +44,7 @@
 					<a
 						in:scale={{ delay: 1100, duration: 400, easing: cubicOut, start: 0.5 }}
 						href="#projects"
+						on:click={(e) => smoothScroll(e, '#projects')}
 						class="btn btn-secondary border-secondary bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold transition-transform duration-300 hover:scale-110"
 					>
 						Projects
@@ -50,6 +52,7 @@
 					<a
 						in:scale={{ delay: 1300, duration: 400, easing: cubicOut, start: 0.5 }}
 						href="#about"
+						on:click={(e) => smoothScroll(e, '#about')}
 						class="btn btn-secondary border-secondary bg-secondary text-primary hover:text-secondary hover:bg-gray-300 hover:border-gray-300 font-bold transition-transform duration-300 hover:scale-110"
 					>
 						About Me

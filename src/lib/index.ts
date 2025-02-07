@@ -69,7 +69,7 @@ export const projects: Record<string, Project> = {
 		summary:
 			'Building my personal portfolio website was an exciting journey that helped me refine my skills in design and development. I learned a lot about Svelte, Figma, responsive design, and performance optimization. Moving forward, I plan to consistently update and improve the existing project pages with more detailed descriptions.',
 		thumbnail: personalWebsiteThumbnail,
-		sourceCodeLink: '',
+		sourceCodeLink: 'https://github.com/DanielvTran/portfolio',
 		slug: 'personal-website'
 	},
 	'to-do-list': {
@@ -99,7 +99,7 @@ export const projects: Record<string, Project> = {
 		summary:
 			'Building this to-do list application was a valuable experience that strengthened my skills in full-stack development, especially with React and Express. I learned a lot about efficient state management, context, user authentication, bearer tokens, UI design, and optimizing responsiveness. Although this is a simple to-do list application, I plan to add more categorization options in the future, such as creating collections and organizing tasks within them.',
 		thumbnail: todolistThumbnail,
-		sourceCodeLink: '',
+		sourceCodeLink: 'https://github.com/DanielvTran/to-do-list',
 		slug: 'to-do-list'
 	},
 	'personal-finance-manager': {
@@ -140,7 +140,7 @@ export const projects: Record<string, Project> = {
 		summary:
 			'Building this to-do list application was a valuable experience that strengthened my skills in full-stack development, especially with React and Express. I learned a lot about efficient state management, context, user authentication, bearer tokens, UI design, and optimizing responsiveness. Although this is a simple to-do list application, I plan to add more categorization options in the future, such as creating collections and organizing tasks within them.',
 		thumbnail: mintyPlanThumbnail,
-		sourceCodeLink: '',
+		sourceCodeLink: 'https://github.com/DanielvTran/personal-finance-manager',
 		slug: 'personal-finance-manager'
 	},
 	'qa-testing-playwright': {
@@ -161,7 +161,7 @@ export const projects: Record<string, Project> = {
 		summary:
 			'For my first time doing end-to-end testing, I think I did a pretty good job. I was able to test some of the major sections of the website and see if it was working as expected. I learned a lot about playwright and how to use locators effectively and uniquely. I plan to incorporate more end-to-end testing with my current projects and, I would also like to make use of CI/CD workflows such as github actions to make sure that my repository is robust, as it is a very important part of any development.',
 		thumbnail: qaTestingPlaywrightThumbnail,
-		sourceCodeLink: '',
+		sourceCodeLink: 'https://github.com/DanielvTran/playwright-testing',
 		slug: 'qa-testing-playwright'
 	}
 };
@@ -215,3 +215,16 @@ export const socialLinks: Record<string, SocialLinks> = {
 		link: 'https://www.linkedin.com/in/daniel-tran-19a9b4225/'
 	}
 };
+
+// Smooth Scroll on navigation
+export function smoothScroll(event: Event, targetId: string) {
+	event.preventDefault();
+
+	const targetElement = document.querySelector(targetId) as HTMLElement | null;
+	if (targetElement) {
+		window.scrollTo({
+			top: targetElement.offsetTop,
+			behavior: 'smooth'
+		});
+	}
+}

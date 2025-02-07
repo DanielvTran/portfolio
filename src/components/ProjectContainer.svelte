@@ -3,15 +3,21 @@
 	export let slug: string;
 	export let thumbnail: string;
 	export let description: string;
+	export let sourceCodeLink: string;
 </script>
 
 <div class="card bg-[#F2F2F2] w-full border-4 border-white py-2">
 	<div class="card-body flex flex-col gap-4">
-		<h2
-			class="card-title text-primary font-bold bg-secondary w-fit px-2 py-1 rounded border-primary border-2 text-lg lg:text-xl md:text-lg sm:text-md xxs:text-sm"
-		>
-			{title}
-		</h2>
+		<div class="heading flex flex-row items-center justify-between">
+			<h2
+				class="card-title text-primary font-bold bg-secondary w-fit px-2 py-1 rounded border-primary border-2 text-lg lg:text-xl md:text-lg sm:text-md xxs:text-sm"
+			>
+				{title}
+			</h2>
+			<a href={sourceCodeLink} target="_blank" class="text-primary"
+				><i class="fa-solid fa-link"></i></a
+			>
+		</div>
 		<a href="/project/{slug}">
 			<img
 				src={thumbnail}
