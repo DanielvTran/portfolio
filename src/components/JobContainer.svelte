@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { reveal } from 'svelte-reveal';
+
 	export let startDate: string;
 	export let endDate: string;
 	export let position: string;
@@ -9,7 +11,17 @@
 	let expanded = false;
 </script>
 
-<div class="w-full bg-white rounded-lg p-5 shadow-lg flex flex-col gap-5 mt-10">
+<div
+	class="w-full bg-white rounded-lg p-5 shadow-lg flex flex-col gap-5 mt-10"
+	use:reveal={{
+		preset: 'slide',
+		x: 0,
+		y: 100,
+		delay: 100,
+		duration: 1000,
+		easing: 'easeInOutCubic'
+	}}
+>
 	<div class="flex flex-col md:flex-row gap-5 p-4 bg-gray-100 rounded-lg">
 		<div class="md:w-1/4 w-full flex flex-col items-left text-center md:text-left">
 			<p class="text-lg font-semibold text-primary">{startDate} - {endDate}</p>

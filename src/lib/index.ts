@@ -215,16 +215,3 @@ export const socialLinks: Record<string, SocialLinks> = {
 		link: 'https://www.linkedin.com/in/daniel-tran-19a9b4225/'
 	}
 };
-
-// Smooth Scroll on navigation
-export function smoothScroll(event: Event, targetId: string) {
-	event.preventDefault();
-
-	const targetElement = document.querySelector(targetId) as HTMLElement | null;
-	if (targetElement) {
-		window.scrollTo({
-			top: targetElement.offsetTop,
-			behavior: 'smooth'
-		});
-	}
-}

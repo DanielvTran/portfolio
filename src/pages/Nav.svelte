@@ -2,7 +2,7 @@
 	import { cubicOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { onMount, tick } from 'svelte';
-	import { smoothScroll } from '$lib';
+	import { smoothScroll } from '$lib/helper';
 
 	let showAnimation = false;
 

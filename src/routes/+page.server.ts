@@ -3,6 +3,8 @@ import { zod } from 'sveltekit-superforms/adapters';
 import { contactFormSchema } from '$lib/validationSchema';
 import axios from 'axios';
 
+export const ssr = false;
+
 export const load = async () => {
 	const form = await superValidate(zod(contactFormSchema));
 

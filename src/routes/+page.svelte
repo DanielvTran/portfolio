@@ -1,6 +1,7 @@
 <script lang="ts">
 	// Svelte
 	import { onMount } from 'svelte';
+	import { smoothScroll } from '$lib/helper';
 
 	// Components
 	import Nav from '../pages/Nav.svelte';
@@ -21,19 +22,6 @@
 
 	// Create the form using superForm
 	// const { form, message, errors, enhance } = superForm(data.form);
-
-	// Smooth Scroll on navigation
-	function smoothScroll(event: Event, targetId: string) {
-		event.preventDefault();
-
-		const targetElement = document.querySelector(targetId) as HTMLElement | null;
-		if (targetElement) {
-			window.scrollTo({
-				top: targetElement.offsetTop,
-				behavior: 'smooth'
-			});
-		}
-	}
 </script>
 
 <div class="flex flex-col w-full">

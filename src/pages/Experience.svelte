@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { jobExperiences } from '$lib';
+	import { reveal } from 'svelte-reveal';
 
 	const jobExperiencesList = Object.values(jobExperiences); // Convert Object into Array
 
@@ -12,7 +13,17 @@
 		<div
 			class="w-full md:flex md:flex-col md:justify-center md:items-center md:w-10/12 sm:flex sm:flex-col sm:justify-center sm:items-center sm:w-10/12 xs:flex xs:flex-col xs:justify-center xs:items-center xs:w-10/12 xxs:flex xxs:flex-col xxs:justify-center xxs:items-center xxs:w-10/12"
 		>
-			<div class="w-fit">
+			<div
+				class="w-fit"
+				use:reveal={{
+					preset: 'slide',
+					x: 0,
+					y: 100,
+					delay: 100,
+					duration: 1000,
+					easing: 'easeInOutCubic'
+				}}
+			>
 				<h1
 					class="text-5xl font-bold text-secondary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl"
 				>

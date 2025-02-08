@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { reveal } from 'svelte-reveal';
+
 	export let title: string;
 	export let slug: string;
 	export let thumbnail: string;
@@ -6,7 +8,17 @@
 	export let sourceCodeLink: string;
 </script>
 
-<div class="card bg-[#F2F2F2] w-full border-4 border-white py-2">
+<div
+	class="card bg-[#F2F2F2] w-full border-4 border-white py-2"
+	use:reveal={{
+		preset: 'slide',
+		x: 0,
+		y: 100,
+		delay: 100,
+		duration: 1000,
+		easing: 'easeInOutCubic'
+	}}
+>
 	<div class="card-body flex flex-col gap-4">
 		<div class="heading flex flex-row items-center justify-between">
 			<h2

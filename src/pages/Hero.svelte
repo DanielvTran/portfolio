@@ -2,13 +2,10 @@
 	import { slide, scale, fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { onMount, tick } from 'svelte';
-	import { socialLinks } from '$lib';
-	import { smoothScroll } from '$lib';
+	import { smoothScroll } from '$lib/helper';
 
 	// Images
 	import bodyshot from '../../static/bodyshot.jpeg';
-
-	const socialLists = Object.values(socialLinks);
 
 	let showAnimation = false;
 
@@ -30,7 +27,6 @@
 			<div class="text-center lg:text-left w-full flex flex-col items-center lg:items-start gap-6">
 				<h1
 					class="text-5xl font-bold text-secondary lg:text-6xl md:text-5xl sm:text-4xl xs:text-3xl"
-					in:slide={{ delay: 100, duration: 600, easing: cubicOut }}
 				>
 					Hi my name is Daniel Tran! 🙌
 				</h1>
