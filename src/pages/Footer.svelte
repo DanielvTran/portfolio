@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { reveal } from 'svelte-reveal';
-
 	import github from '../../static/icons/github.svg';
 	import linkedin from '../../static/icons/linkedin.svg';
 </script>
@@ -8,33 +6,13 @@
 <footer
 	class="footer footer-center bg-base-200 text-base-content rounded p-10 3xl:text-lg 2xl:text-lg xl:text-md md:text-xs sm:text-xs"
 >
-	<nav
-		class="grid grid-flow-col gap-4"
-		use:reveal={{
-			preset: 'slide',
-			x: 0,
-			y: 100,
-			delay: 100,
-			duration: 1000,
-			easing: 'easeInOutCubic'
-		}}
-	>
+	<nav class="grid grid-flow-col gap-4">
 		<a class="link link-hover" href="#about">About me</a>
 		<!-- <a class="link link-hover" href="#contact">Contact</a> -->
 		<a class="link link-hover" href="#projects">Projects</a>
 	</nav>
 	<nav>
-		<div
-			class="grid grid-flow-col gap-4"
-			use:reveal={{
-				preset: 'slide',
-				x: 0,
-				y: 100,
-				delay: 100,
-				duration: 1000,
-				easing: 'easeInOutCubic'
-			}}
-		>
+		<div class="grid grid-flow-col gap-4">
 			<a target="_blank" href="https://github.com/DanielvTran">
 				<img src={github} alt="github icon" />
 			</a>

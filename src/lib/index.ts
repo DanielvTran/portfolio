@@ -7,34 +7,23 @@ import mintyPlanThumbnail from '../../static/portfolio/thumbnails/mintyPlanThumb
 import qaTestingPlaywrightThumbnail from '../../static/portfolio/thumbnails/qaTestingPlaywrightThumbnail.png';
 
 // Planning
-import personalWebsiteFigma1 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign1.png';
-import personalWebsiteFigma2 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign2.png';
-import personalWebsiteFigma3 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign3.png';
-import personalWebsiteFigma4 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign4.png';
-import personalWebsiteFigma5 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign5.png';
-import personalWebsiteFigma6 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign6.png';
-import personalWebsiteFigma7 from '../../static/portfolio/planning/personalwebsite/personalWebsiteDesign7.png';
+const personalPortfolioImages = Object.values(
+	import.meta.glob('../../static/portfolio/planning/personalwebsite/*.png', {
+		eager: true
+	})
+).map((module: any) => module.default) as string[];
 
-import todolistDesignFigma1 from '../../static/portfolio/planning/todolist/todolistDesign1.png';
-import todolistDesignFigma2 from '../../static/portfolio/planning/todolist/todolistDesign2.png';
-import todolistDesignFigma3 from '../../static/portfolio/planning/todolist/todolistDesign3.png';
-import todolistDesignFigma4 from '../../static/portfolio/planning/todolist/todolistDesign4.png';
-import todolistDesignFigma5 from '../../static/portfolio/planning/todolist/todolistDesign5.png';
+const toDoListImages = Object.values(
+	import.meta.glob('../../static/portfolio/planning/todolist/*.png', {
+		eager: true
+	})
+).map((module: any) => module.default) as string[];
 
-import personalFinanceManagerFigma1 from '../../static/portfolio/planning/personalfinancemanager/design1.png';
-import personalFinanceManagerFigma2 from '../../static/portfolio/planning/personalfinancemanager/design2.png';
-import personalFinanceManagerFigma3 from '../../static/portfolio/planning/personalfinancemanager/design3.png';
-import personalFinanceManagerFigma4 from '../../static/portfolio/planning/personalfinancemanager/design4.png';
-import personalFinanceManagerFigma5 from '../../static/portfolio/planning/personalfinancemanager/design5.png';
-import personalFinanceManagerFigma6 from '../../static/portfolio/planning/personalfinancemanager/design6.png';
-import personalFinanceManagerFigma7 from '../../static/portfolio/planning/personalfinancemanager/design7.png';
-import personalFinanceManagerFigma8 from '../../static/portfolio/planning/personalfinancemanager/design8.png';
-import personalFinanceManagerFigma9 from '../../static/portfolio/planning/personalfinancemanager/design9.png';
-import personalFinanceManagerFigma10 from '../../static/portfolio/planning/personalfinancemanager/design10.png';
-import personalFinanceManagerFigma11 from '../../static/portfolio/planning/personalfinancemanager/design11.png';
-import personalFinanceManagerFigma12 from '../../static/portfolio/planning/personalfinancemanager/design12.png';
-import personalFinanceManagerFigma13 from '../../static/portfolio/planning/personalfinancemanager/design13.png';
-import personalFinanceManagerFigma14 from '../../static/portfolio/planning/personalfinancemanager/design14.png';
+const personalFinanceManagerImages = Object.values(
+	import.meta.glob('../../static/portfolio/planning/personalfinancemanager/*.png', {
+		eager: true
+	})
+).map((module: any) => module.default) as string[];
 
 // Demo
 import personalWebsiteDemo from '../../static/portfolio/demo/personalWebsiteDemo.mov';
@@ -51,15 +40,7 @@ export const projects: Record<string, Project> = {
 		planningDescriptions: [
 			"When designing my personal website, I start by prototyping. This involves selecting the color scheme, defining the page structure, and creating initial layouts, which you can see in the image carousel below. Once the design is set, I begin development by focusing on a specific screen size. I create all the pages based on that size, ensuring the design aligns with my vision. If it doesn’t, I revisit Figma for further adjustments—there were quite a few iterations along the way! 😅 Once I'm satisfied with the design, I proceed to make it responsive across major screen sizes: 370px, 450px, 640px, 768px, 1024px, 1280px, 1536px, and 1972px. This approach ensures a consistent and polished experience across all devices."
 		],
-		planningImages: [
-			personalWebsiteFigma1,
-			personalWebsiteFigma2,
-			personalWebsiteFigma3,
-			personalWebsiteFigma4,
-			personalWebsiteFigma5,
-			personalWebsiteFigma6,
-			personalWebsiteFigma7
-		],
+		planningImages: Object.values(personalPortfolioImages),
 		demoDescription:
 			'This walkthrough demo explores the website, highlighting its responsive design across all pages.',
 		demoVideo: personalWebsiteDemo,
@@ -81,13 +62,7 @@ export const projects: Record<string, Project> = {
 		planningDescriptions: [
 			'Similar to many of my other web development projects, I usually start with the theme, and structure of the application. This is generated using Figma, which I am still learning how to use. For this project, I had a initial design idea, however, as I was developing and implementing it, it did not look as great. Therefore there is a slight change in design structure in the final design, which can be seen in the demo.'
 		],
-		planningImages: [
-			todolistDesignFigma1,
-			todolistDesignFigma2,
-			todolistDesignFigma3,
-			todolistDesignFigma4,
-			todolistDesignFigma5
-		],
+		planningImages: Object.values(toDoListImages),
 		demoDescription:
 			'This demo walks through the main features of the To-Do List app, showing how tasks can be created, edited, completed, and deleted. It highlights the responsive design and user-friendly interactions for efficient task management.',
 		demoVideo: todolistDemo,
@@ -104,7 +79,7 @@ export const projects: Record<string, Project> = {
 	},
 	'personal-finance-manager': {
 		title: 'Personal Finance Manager',
-		description: 'Built with Next.js, Prisma for MySQL, Tailwind, DaisyUI',
+		description: 'Built with Next.js, MySQL, Tailwind',
 		overview:
 			'The Personal Finance Manager is a web application designed to help users track their income and expenses, set budgets, and visualize financial data through interactive summaries and charts. With features like transaction management, budget tracking, and customizable categories, it provides a solution for managing personal finances. The application also supports secure user authentication to ensure data privacy and protection.',
 		figmaFile: '../../static/portfolio/figma/personalFinanceManagerFigma.fig',
@@ -113,22 +88,7 @@ export const projects: Record<string, Project> = {
 			"Then, I moved onto doing design research. This process is usually taxing, as there are so many different inspiration online. Eventually, I started designing and coming up designs as I go. There were, many things that worked and didn't work, which is why it takes quite a while to design the structure of the website. But eventually, I came up with the design, as seen in the image carousel.",
 			'Lastly, I had to choose which tech stack that I want to develop with. I have noticed, that I am quite unfamiliar with Nextjs and, have not used MySQL in a while. So, I challenged myself to work with this stack.'
 		],
-		planningImages: [
-			personalFinanceManagerFigma1,
-			personalFinanceManagerFigma2,
-			personalFinanceManagerFigma3,
-			personalFinanceManagerFigma4,
-			personalFinanceManagerFigma5,
-			personalFinanceManagerFigma6,
-			personalFinanceManagerFigma7,
-			personalFinanceManagerFigma8,
-			personalFinanceManagerFigma9,
-			personalFinanceManagerFigma10,
-			personalFinanceManagerFigma11,
-			personalFinanceManagerFigma12,
-			personalFinanceManagerFigma13,
-			personalFinanceManagerFigma14
-		],
+		planningImages: Object.values(personalFinanceManagerImages),
 		demoDescription:
 			'This demo walks through the main features of the Personal Finance Manager app, showing the tracking of income, expenses, budgets, categories, and reports visualisation.',
 		demoVideo: todolistDemo,
@@ -214,4 +174,12 @@ export const socialLinks: Record<string, SocialLinks> = {
 		social: 'linkedin',
 		link: 'https://www.linkedin.com/in/daniel-tran-19a9b4225/'
 	}
+};
+
+export const standardReveal = {
+	preset: 'slide' as const,
+	y: 100,
+	delay: 100,
+	duration: 1000,
+	easing: 'easeInOutCubic' as const
 };

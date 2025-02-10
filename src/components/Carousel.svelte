@@ -1,57 +1,86 @@
 <script lang="ts">
-	// Define state for the carousel
-	let currentIndex = 0;
+	import RevealAnimation from './RevealAnimation.svelte';
+	import { standardReveal } from '$lib';
 
-	// Example of project planning images
 	export let images: string[] = [];
 
+	let currentIndex = 0;
+	let interval: ReturnType<typeof setInterval> | undefined;
+
 	// Function to navigate to the next image
-	function next() {
-		if (currentIndex < images.length - 1) {
-			currentIndex += 1;
-		} else {
-			currentIndex = 0; // Loop back to the first image
-		}
+	function nextSlide() {
+		currentIndex = (currentIndex + 1) % images.length;
 	}
 
 	// Function to navigate to the previous image
-	function prev() {
-		if (currentIndex > 0) {
-			currentIndex -= 1;
-		} else {
-			currentIndex = images.length - 1; // Loop back to the last image
-		}
+	function prevSlide() {
+		currentIndex = (currentIndex - 1 + images.length) % images.length;
 	}
+
+	// Auto-slide functionality (change slide every 3 seconds)
+	function startAutoSlide() {
+		interval = setInterval(nextSlide, 3000);
+	}
+
+	function stopAutoSlide() {
+		clearInterval(interval);
+	}
+
+	// Start auto-slide when component mounts
+	startAutoSlide();
 </script>
 
-<div class="carousel-container relative flex flex-col items-center my-10">
-	<div
-		class="carousel-images flex justify-center items-center overflow-hidden w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-2xl"
-	>
-		{#if images.length > 0}
+<div
+	class="relative w-full max-w-2xl h-[400px] mx-auto mb-10 flex items-center justify-center overflow-visible"
+	role="region"
+	aria-label="Image Carousel"
+	on:mouseover={stopAutoSlide}
+	on:mouseleave={startAutoSlide}
+	on:focus={stopAutoSlide}
+	on:blur={startAutoSlide}
+>
+	{#each images as image, index}
+		<div
+			class="w-full h-full transition-opacity duration-500 ease-in-out flex items-center justify-center"
+			class:hidden={index !== currentIndex}
+			style="transform: translateY(var(--reveal-offset, 0px));"
+		>
 			<img
-				src={images[currentIndex]}
-				class="p-2 border-4 border-primary bg-white w-full h-auto max-h-[80vh] object-cover transition ease-in-out duration-500"
-				alt={`Carousel image ${currentIndex + 1}`}
+				src={image}
+				alt="Slide {index + 1}"
+				class="w-full h-full object-cover rounded-lg shadow-md"
 			/>
-		{:else}
-			<p class="text-primary">No images available</p>
-		{/if}
+		</div>
+	{/each}
+
+	<!-- Navigation Buttons -->
+	<div class="absolute inset-0 flex justify-between items-center px-4">
+		<button
+			on:click={prevSlide}
+			class="bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition duration-200"
+			aria-label="Previous slide"
+		>
+			❮
+		</button>
+		<button
+			on:click={nextSlide}
+			class="bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition duration-200"
+			aria-label="Next slide"
+		>
+			❯
+		</button>
 	</div>
 
-	<!-- Carousel Controls -->
-	<div class="carousel-controls flex justify-between mt-4 gap-5">
-		<button
-			class="btn-prev flex items-center p-2 bg-primary text-white cursor-pointer hover:bg-gray-400 hover:text-primary rounded transition ease-in-out duration-300"
-			on:click={prev}
-		>
-			<span class="material-symbols-outlined"> chevron_left </span>
-		</button>
-		<button
-			class="btn-next flex items-center p-2 bg-primary text-white cursor-pointer hover:bg-gray-400 hover:text-primary rounded transition ease-in-out duration-300"
-			on:click={next}
-		>
-			<span class="material-symbols-outlined"> chevron_right </span>
-		</button>
+	<!-- Slide Indicators -->
+	<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+		{#each images as _, index}
+			<button
+				class="w-3 h-3 rounded-full transition-colors duration-300"
+				class:bg-blue-500={index === currentIndex}
+				class:bg-gray-400={index !== currentIndex}
+				on:click={() => (currentIndex = index)}
+				aria-label={`Go to slide ${index + 1}`}
+			></button>
+		{/each}
 	</div>
 </div>

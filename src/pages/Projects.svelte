@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { reveal } from 'svelte-reveal';
+	import RevealAnimation from '../components/RevealAnimation.svelte';
+	import { standardReveal } from '$lib';
 
 	import { projects } from '$lib';
 	import ProjectContainer from '../components/ProjectContainer.svelte';
@@ -12,24 +13,16 @@
 	class="projects-container hero bg-primary secondary min-h-screen w-full p-10 xs:p-5 xxs:p-3"
 >
 	<div class="hero-content w-full flex-col lg:flex-col">
-		<div
-			class="w-fit"
-			use:reveal={{
-				preset: 'slide',
-				x: 0,
-				y: 100,
-				delay: 100,
-				duration: 1000,
-				easing: 'easeInOutCubic'
-			}}
-		>
-			<h1
-				class="text-5xl font-bold text-secondary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-xl"
-			>
-				Projects
-			</h1>
-			<div class="border-2 my-4 border-primary"></div>
-		</div>
+		<RevealAnimation {...standardReveal}>
+			<div class="w-fit">
+				<h1
+					class="text-5xl font-bold text-secondary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-xl"
+				>
+					Projects
+				</h1>
+				<div class="border-2 my-4 border-primary"></div>
+			</div>
+		</RevealAnimation>
 
 		<div
 			class="projects-container-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-primary gap-6 px-4 py-4 w-full xxs:px-2"
