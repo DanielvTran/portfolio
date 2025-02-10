@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import RevealAnimation from '../components/RevealAnimation.svelte';
 	import { smoothScroll } from '$lib/helper';
 
@@ -11,11 +10,14 @@
 	};
 </script>
 
-<div id="nav" class="navbar w-full bg-secondary px-20">
+<div
+	id="nav"
+	class="navbar w-full bg-secondary px-6 xxs:px-7 sm:px-8 md:px-10 lg:px-16 xl:px-20 py-8 sm:py-7 md:py-6 lg:py-5 xl:py-6 2xl:py-8 flex justify-between items-center"
+>
 	<div class="flex-1">
 		<RevealAnimation preset="scale" delay={100} duration={700}>
 			<p
-				class="text-primary font-bold text-2xl xxs:text-xl xs:text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl"
+				class="text-primary font-bold text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl sm:mr-6"
 			>
 				Daniel Tran
 			</p>
@@ -23,15 +25,19 @@
 	</div>
 
 	<!-- Hamburger Menu Icon for small screens -->
-	<div class="flex-none sm:hidden">
-		<button class="text-primary text-3xl" on:click={toggleMenu} aria-label="Toggle Menu">
-			<i class="fa-solid fa-bars"></i>
-		</button>
+	<div class="flex-none sm:hidden sm:ml-6">
+		<RevealAnimation preset="scale" delay={100} duration={700}>
+			<button class="text-primary text-3xl" on:click={toggleMenu} aria-label="Toggle Menu">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</RevealAnimation>
 	</div>
 
 	<!-- Navbar links, visible on large screens and when hamburger is clicked on small screens -->
 	<div class="flex-none hidden sm:block">
-		<ul class="flex gap-[5vw] text-[1vw]">
+		<ul
+			class="flex gap-5 sm:gap-5 lg:gap-[60px] 2xl:gap-[100px] text-md sm:text-md md:text-2xl lg:text-2xl 2xl:text-3xl"
+		>
 			{#each ['About', 'Experiences', 'Skills', 'Projects'] as section, index}
 				<RevealAnimation preset="scale" delay={200 + index * 100} duration={700}>
 					<li>
