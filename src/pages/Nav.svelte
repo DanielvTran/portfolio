@@ -1,18 +1,19 @@
 <script lang="ts">
 	import RevealAnimation from '../components/RevealAnimation.svelte';
 	import { smoothScroll } from '$lib/helper';
+	import { isNavOpen } from '$lib/stores';
 
 	let isOpen = false;
 
 	// Toggle the hamburger menu on small screens
 	const toggleMenu = () => {
-		isOpen = !isOpen;
+		isNavOpen.update((prev) => !prev);
 	};
 </script>
 
 <div
 	id="nav"
-	class="navbar w-full bg-secondary px-6 xxs:px-7 sm:px-8 md:px-10 lg:px-16 xl:px-20 py-8 sm:py-7 md:py-6 lg:py-5 xl:py-6 2xl:py-8 flex justify-between items-center"
+	class="navbar w-full bg-secondary px-6 xxs:px-7 sm:px-8 md:px-10 lg:px-16 xl:px-20 py-8 sm:py-7 md:py-6 lg:py-5 xl:py-6 2xl:py-8 flex justify-between items-center z-50"
 >
 	<div class="flex-1">
 		<RevealAnimation preset="scale" delay={100} duration={700}>
@@ -55,8 +56,8 @@
 	</div>
 
 	<!-- Mobile Menu Dropdown, visible when hamburger is clicked -->
-	{#if isOpen}
-		<div class="sm:hidden absolute top-20 right-0 w-full bg-secondary px-6 py-4">
+	{#if $isNavOpen}
+		<div class="sm:hidden absolute top-20 right-0 w-full bg-secondary px-6 py-4 z-50">
 			<ul class="flex flex-col gap-4">
 				{#each ['About', 'Experiences', 'Skills', 'Projects'] as section, index}
 					<RevealAnimation preset="scale" delay={200 + index * 100} duration={700}>

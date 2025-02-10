@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Svelte
-	import { onMount } from 'svelte';
+	import { isNavOpen } from '$lib/stores';
 	import { smoothScroll } from '$lib/helper';
 
 	// Components
@@ -24,8 +24,9 @@
 	// const { form, message, errors, enhance } = superForm(data.form);
 </script>
 
-<div class="flex flex-col w-full">
-	<Nav />
+<Nav />
+
+<div class={`flex flex-col w-full transition-all duration-300 ${$isNavOpen ? 'blur-sm' : ''}`}>
 	<Hero />
 	<About />
 	<Experience />
