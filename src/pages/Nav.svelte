@@ -37,7 +37,7 @@
 	<!-- Navbar links, visible on large screens and when hamburger is clicked on small screens -->
 	<div class="flex-none hidden sm:block">
 		<ul
-			class="flex gap-5 sm:gap-5 lg:gap-[60px] 2xl:gap-[100px] text-md sm:text-md md:text-2xl lg:text-2xl 2xl:text-3xl"
+			class="flex gap-5 sm:gap-5 lg:gap-[60px] 2xl:gap-[100px] text-md sm:text-md md:text-xl lg:text-2xl 2xl:text-3xl"
 		>
 			{#each ['About', 'Experiences', 'Skills', 'Projects'] as section, index}
 				<RevealAnimation preset="scale" delay={200 + index * 100} duration={700}>
@@ -58,9 +58,9 @@
 	<!-- Mobile Menu Dropdown, visible when hamburger is clicked -->
 	{#if $isNavOpen}
 		<div class="sm:hidden absolute top-20 right-0 w-full bg-secondary px-6 py-4 z-50">
-			<ul class="flex flex-col gap-4">
+			<ul class="flex flex-col gap-4 mb-5">
 				{#each ['About', 'Experiences', 'Skills', 'Projects'] as section, index}
-					<RevealAnimation preset="scale" delay={200 + index * 100} duration={700}>
+					<RevealAnimation preset="fade" delay={200 + index * 100} duration={700} y={0}>
 						<li>
 							<a
 								href={`#${section.toLowerCase()}`}
