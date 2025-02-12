@@ -10,7 +10,9 @@
 </script>
 
 <div id="hero" class="hero bg-primary min-h-screen w-full flex items-center justify-center">
-	<div class="hero-content w-full flex flex-col lg:flex-row items-center justify-center lg:gap-10">
+	<div
+		class="hero-content w-full flex flex-col lg:flex-row items-center justify-center lg:gap-10 lg:px-20"
+	>
 		<div class="text-center lg:text-left w-full flex flex-col items-center lg:items-start gap-6">
 			<RevealAnimation preset="fade" delay={500} duration={1200}>
 				<h1
