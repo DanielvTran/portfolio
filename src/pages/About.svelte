@@ -8,7 +8,7 @@
 </script>
 
 <div id="about" class="hero bg-secondary min-h-screen w-full md:py-10">
-	<div class="hero-content w-full flex-col lg:flex-row-reverse md:gap-10 lg:px-20">
+	<div class="hero-content w-full flex-col lg:flex-row-reverse md:gap-10 lg:px-20 my-28">
 		<div
 			class="w-full md:flex md:flex-col md:justify-center md:items-center md:w-10/12 sm:flex sm:flex-col sm:justify-center sm:items-center sm:w-10/12 xs:flex xs:flex-col xs:justify-center xs:items-center xs:w-10/12 xxs:flex xxs:flex-col xxs:justify-center xxs:items-center xxs:w-10/12"
 		>

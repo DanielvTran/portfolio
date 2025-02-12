@@ -1,7 +1,4 @@
 <script lang="ts">
-	import RevealAnimation from './RevealAnimation.svelte';
-	import { standardReveal } from '$lib';
-
 	export let images: string[] = [];
 
 	let currentIndex = 0;
@@ -31,7 +28,7 @@
 </script>
 
 <div
-	class="relative w-full max-w-2xl h-[400px] mx-auto mb-10 flex items-center justify-center overflow-visible"
+	class="flex flex-col gap-5 w-full max-w-2xl h-full mx-auto items-center justify-center my-5"
 	role="region"
 	aria-label="Image Carousel"
 	on:mouseover={stopAutoSlide}
@@ -43,36 +40,17 @@
 		<div
 			class="w-full h-full transition-opacity duration-500 ease-in-out flex items-center justify-center"
 			class:hidden={index !== currentIndex}
-			style="transform: translateY(var(--reveal-offset, 0px));"
 		>
 			<img
 				src={image}
 				alt="Slide {index + 1}"
-				class="w-full h-full object-cover rounded-lg shadow-md"
+				class="border-4 border-gray-400 w-[100%] max-w-3xl rounded-lg shadow-2xl 3xl:max-w-4xl 2xl:max-w-3xl xl:max-w-2xl lg:max-w-xl xs:max-w-lg xxs:max-w-[150%]"
 			/>
 		</div>
 	{/each}
 
-	<!-- Navigation Buttons -->
-	<div class="absolute inset-0 flex justify-between items-center px-4">
-		<button
-			on:click={prevSlide}
-			class="bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition duration-200"
-			aria-label="Previous slide"
-		>
-			❮
-		</button>
-		<button
-			on:click={nextSlide}
-			class="bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition duration-200"
-			aria-label="Next slide"
-		>
-			❯
-		</button>
-	</div>
-
 	<!-- Slide Indicators -->
-	<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+	<div class="flex gap-2">
 		{#each images as _, index}
 			<button
 				class="w-3 h-3 rounded-full transition-colors duration-300"

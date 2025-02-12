@@ -12,11 +12,11 @@
 	id="projects"
 	class="projects-container hero bg-primary secondary min-h-screen w-full p-10 xs:p-5 xxs:p-3"
 >
-	<div class="hero-content w-full flex-col lg:flex-col">
+	<div class="hero-content w-full flex-col lg:flex-col my-28">
 		<RevealAnimation {...standardReveal}>
 			<div class="w-fit mt-20">
 				<h1
-					class="text-5xl font-bold text-secondary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-xl"
+					class="text-5xl font-bold text-secondary xl:text-7xl md:text-5xl sm:text-4xl xs:text-4xl xxs:text-5xl"
 				>
 					Projects
 				</h1>

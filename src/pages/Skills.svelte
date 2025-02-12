@@ -4,7 +4,7 @@
 </script>
 
 <div id="skills" class="hero bg-secondary min-h-screen w-full py-10 px-5 md:px-10 lg:px-20">
-	<div class="hero-content w-full flex flex-col md:gap-10">
+	<div class="hero-content w-full flex flex-col md:gap-10 my-28">
 		<div class="w-full flex flex-col items-center text-center">
 			<RevealAnimation {...standardReveal}>
 				<div class="w-fit">
