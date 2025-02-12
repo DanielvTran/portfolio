@@ -1,75 +1,68 @@
 <script lang="ts">
 	import RevealAnimation from '../components/RevealAnimation.svelte';
-	import { standardReveal } from '$lib';
-
-	// Icons
-	import react from '../../static/icons/react.svg';
-	import firebase from '../../static/icons/firebase.svg';
-	import nodejs from '../../static/icons/nodejs.svg';
-	import svelte from '../../static/icons/svelte.svg';
-	import tailwindcss from '../../static/icons/tailwindcss.svg';
-	import typescript from '../../static/icons/typescript.svg';
+	import { standardReveal, skills } from '$lib';
 </script>
 
-<div id="skills" class="hero bg-secondary min-h-screen w-full md:py-10">
-	<div class="hero-content w-full flex-col lg:flex-col">
-		<RevealAnimation {...standardReveal}>
-			<div class="w-fit">
-				<h1
-					class="text-5xl font-bold text-primary 3xl:text-8xl 2xl:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl"
-				>
-					Skills
-				</h1>
-				<div class="border-2 my-5 border-primary"></div>
-			</div>
-		</RevealAnimation>
-
-		<RevealAnimation {...standardReveal}>
-			<p
-				class="py-6 text-2xl text-primary 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm md:text-center sm:text-sm sm:text-center xs:text-sm xs:text-center xxs:text-sm xxs:text-center"
-			>
-				With experience in both frontend and backend technologies, I develop full-stack applications
-				using React, Svelte, Next.js, Playwright, TypeScript, MySQL, Firebase, Tailwind CSS, and
-				Node.js. I also have experience implementing CI/CD pipelines with GitHub Actions for
-				testing.
-			</p>
-		</RevealAnimation>
-
-		<div class="skills-icon-container flex flex-row gap-10 sm:gap-10 xxs:gap-5">
-			<div class="skills-left">
-				<RevealAnimation {...standardReveal}>
+<div id="skills" class="hero bg-secondary min-h-screen w-full py-10 px-5 md:px-10 lg:px-20">
+	<div class="hero-content w-full flex flex-col md:gap-10">
+		<div class="w-full flex flex-col items-center text-center">
+			<RevealAnimation {...standardReveal}>
+				<div class="w-fit">
 					<h1
-						class="text-2xl font-bold text-primary text-right my-10 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-md md:my-5 sm:text-md sm:my-3 xs:text-md xs:my-3 xxs:text-sm xxs:my-3"
+						class="text-5xl font-bold text-primary xl:text-7xl md:text-5xl sm:text-4xl xs:text-4xl xxs:text-5xl"
 					>
-						Frontend
+						Skills
 					</h1>
-				</RevealAnimation>
+					<div class="border-2 my-5 border-primary"></div>
+				</div>
+			</RevealAnimation>
 
-				<RevealAnimation {...standardReveal}>
-					<div class="skills-icons flex flex-row">
-						<img alt="react" src={react} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
-						<img alt="svelte" src={svelte} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
-						<img alt="tailwindcss" src={tailwindcss} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
-					</div>
-				</RevealAnimation>
-			</div>
-			<div class="skills-right">
-				<RevealAnimation {...standardReveal}>
-					<h1
-						class="text-2xl font-bold text-primary my-10 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-md md:my-5 sm:text-md sm:my-3 xs:text-md xs:my-3 xxs:text-sm xxs:my-3"
+			<RevealAnimation {...standardReveal}>
+				<p class="py-4 text-lg text-primary sm:text-xl md:text-2xl max-w-3xl">
+					With experience in both frontend and backend technologies, I develop full-stack
+					applications using React, Svelte, Next.js, Playwright, TypeScript, MySQL, Firebase,
+					Tailwind CSS, and Node.js. I also have experience implementing CI/CD pipelines with GitHub
+					Actions for testing.
+				</p>
+			</RevealAnimation>
+		</div>
+
+		<div class="flex flex-wrap justify-center gap-3 mb-10">
+			{#each Object.entries(skills) as [category, skillList]}
+				<div class="w-full text-center">
+					<!-- Reveal category -->
+					<RevealAnimation
+						preset="slide"
+						x={0}
+						y={100}
+						delay={0}
+						duration={1000}
+						easing="easeInOutCubic"
 					>
-						Backend
-					</h1>
-				</RevealAnimation>
+						<h2 class="text-lg font-bold text-primary my-5">{category}</h2>
+					</RevealAnimation>
 
-				<RevealAnimation {...standardReveal}>
-					<div class="skills-icons flex flex-row">
-						<img alt="typescript" src={typescript} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
-						<img alt="firebase" src={firebase} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
-						<img alt="nodejs" src={nodejs} class="md:w-20 sm:w-20 xs:w-14 xxs:w-12" />
+					<!-- Reveal skills with sequential delays -->
+					<div class="flex flex-wrap justify-center gap-2">
+						{#each skillList as skill, i (skill)}
+							<RevealAnimation
+								preset="slide"
+								x={0}
+								y={100}
+								delay={i * 200}
+								duration={1000}
+								easing="easeInOutCubic"
+							>
+								<span
+									class="bg-primary text-secondary px-4 py-2 rounded-full text-base sm:text-lg font-semibold shadow-md transition-transform duration-300 hover:scale-110 xxs:px-3 xxs:py-1 xxs:text-sm"
+								>
+									{skill}
+								</span>
+							</RevealAnimation>
+						{/each}
 					</div>
-				</RevealAnimation>
-			</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 </div>

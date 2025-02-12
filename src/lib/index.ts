@@ -176,6 +176,40 @@ export const socialLinks: Record<string, SocialLinks> = {
 	}
 };
 
+export const skills = {
+	Languages: [
+		'HTML',
+		'CSS',
+		'JavaScript',
+		'TypeScript',
+		'Svelte',
+		'C#',
+		'Python',
+		'Java',
+		'GraphQL'
+	],
+	'Libraries & Frameworks': [
+		'React',
+		'Next.js',
+		'Node.js',
+		'Express.js',
+		'Playwright',
+		'Jest',
+		'Prisma',
+		'REST API'
+	],
+	Database: ['MySQL', 'MongoDB', 'Firebase'],
+	Tools: [
+		'Git',
+		'GitHub Actions',
+		'Visual Studio Code',
+		'Visual Studio',
+		'Jira',
+		'Postman',
+		'Vercel'
+	]
+} as const;
+
 export const standardReveal = {
 	preset: 'slide' as const,
 	y: 100,
