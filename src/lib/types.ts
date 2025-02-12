@@ -1,6 +1,5 @@
 export type Project = {
 	title: string;
-	description: string;
 	overview: string;
 	figmaFile: string;
 	planningDescriptions: string[];

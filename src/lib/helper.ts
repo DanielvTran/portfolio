@@ -1,3 +1,5 @@
+import { isNavOpen } from './stores';
+
 // Smooth Scroll on navigation
 export function smoothScroll(event: Event, targetId: string) {
 	event.preventDefault();
@@ -9,4 +11,6 @@ export function smoothScroll(event: Event, targetId: string) {
 			behavior: 'smooth'
 		});
 	}
+
+	isNavOpen.set(false);
 }

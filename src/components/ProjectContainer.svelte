@@ -5,7 +5,6 @@
 	export let title: string;
 	export let slug: string;
 	export let thumbnail: string;
-	export let description: string;
 	export let sourceCodeLink: string;
 </script>
 
@@ -14,7 +13,7 @@
 		<div class="card-body flex flex-col gap-4">
 			<div class="heading flex flex-row items-center justify-between">
 				<h2
-					class="card-title text-primary font-bold bg-secondary w-fit px-2 py-1 rounded border-primary border-2 text-lg lg:text-xl md:text-lg sm:text-md xxs:text-sm"
+					class="card-title text-primary font-bold bg-secondary w-fit px-2 py-1 rounded border-primary border-2 text-lg lg:text-xl md:text-md sm:text-md xxs:text-sm"
 				>
 					{title}
 				</h2>
@@ -26,13 +25,14 @@
 				>
 			</div>
 			<a href="/project/{slug}">
-				<img
-					src={thumbnail}
-					alt="Project {title}"
-					class="max-w-full rounded-md border-4 border-primary transition-transform duration-300 hover:scale-110"
-				/>
+				<div class="relative w-full pb-[56.25%] sm:pb-[56.25%] md:pb-[56.25%] lg:pb-[56.25%]">
+					<img
+						src={thumbnail}
+						alt="Project {title}"
+						class="absolute top-0 left-0 w-full h-full object-cover rounded-md border-4 border-primary transition-transform duration-300 hover:scale-110"
+					/>
+				</div>
 			</a>
-			<p class="text-center text-primary font-bold xxs:text-md">{description}</p>
 			<div class="card-actions justify-center">
 				<a
 					href={`/project/${slug}`}

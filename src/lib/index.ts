@@ -33,12 +33,11 @@ import qaTestingPlaywrightDemo from '../../static/portfolio/demo/qaTestingPlaywr
 export const projects: Record<string, Project> = {
 	'personal-website': {
 		title: 'Personal Website',
-		description: 'Created using Svelte',
 		overview:
-			'The goal of this project was to build a clean, aesthetically appealing personal portfolio website designed to showcase my skills, projects, and professional experiences. I focused on creating a user-friendly and visually engaging platform that highlights my expertise as a web developer, using modern design principles and smooth, responsive layouts.',
+			'The goal of this project was to build a clean, aesthetically appealing portfolio website designed to showcase my skills, projects, and professional experiences. I focused on creating a user-friendly and visually engaging platform that highlights my expertise as a web developer, using modern design principles and smooth, responsive layouts.',
 		figmaFile: '../../static/portfolio/figma/personalWebsiteFigma.fig',
 		planningDescriptions: [
-			"When designing my personal website, I start by prototyping. This involves selecting the color scheme, defining the page structure, and creating initial layouts, which you can see in the image carousel below. Once the design is set, I begin development by focusing on a specific screen size. I create all the pages based on that size, ensuring the design aligns with my vision. If it doesn’t, I revisit Figma for further adjustments—there were quite a few iterations along the way! 😅 Once I'm satisfied with the design, I proceed to make it responsive across major screen sizes: 370px, 450px, 640px, 768px, 1024px, 1280px, 1536px, and 1972px. This approach ensures a consistent and polished experience across all devices."
+			"When designing my website, I start by prototyping. This involves selecting the color scheme, defining the page structure, and creating initial layouts, which you can see in the image carousel below. Once the design is set, I begin development by focusing on a specific screen size. I create all the pages based on that size, ensuring the design aligns with my vision. If it doesn’t, I revisit Figma for further adjustments—there were quite a few iterations along the way! 😅 Once I'm satisfied with the design, I proceed to make it responsive across major screen sizes: 370px, 450px, 640px, 768px, 1024px, 1280px, 1536px, and 1972px. This approach ensures a consistent and polished experience across all devices."
 		],
 		planningImages: Object.values(personalPortfolioImages),
 		demoDescription:
@@ -48,14 +47,13 @@ export const projects: Record<string, Project> = {
 			'One of the main challenges was making the website fully responsive across all devices. I tackled this by using flexible CSS grids and media queries to ensure a consistent layout on different screen sizes. Another issue was optimizing image loading for a better user experience, which I resolved by using image compression and lazy loading techniques.'
 		],
 		summary:
-			'Building my personal portfolio website was an exciting journey that helped me refine my skills in design and development. I learned a lot about Svelte, Figma, responsive design, and performance optimization. Moving forward, I plan to consistently update and improve the existing project pages with more detailed descriptions.',
+			'Building my portfolio website was an exciting journey that helped me refine my skills in design and development. I learned a lot about Svelte, Figma, responsive design, and performance optimization. Moving forward, I plan to consistently update and improve the existing project pages with more detailed descriptions.',
 		thumbnail: personalWebsiteThumbnail,
 		sourceCodeLink: 'https://github.com/DanielvTran/portfolio',
 		slug: 'personal-website'
 	},
 	'to-do-list': {
 		title: 'To-Do List',
-		description: 'Built using React, Express, and MongoDB',
 		overview:
 			'This project aimed to create a simple yet effective To-Do List application to manage tasks. The focus was on building a clean, user-friendly interface that allows users to add, edit, and delete tasks seamlessly. The application demonstrates full CRUD functionality and uses a responsive design to ensure usability across devices.',
 		figmaFile: '../../static/portfolio/figma/toDoListFigma.fig',
@@ -77,11 +75,10 @@ export const projects: Record<string, Project> = {
 		sourceCodeLink: 'https://github.com/DanielvTran/to-do-list',
 		slug: 'to-do-list'
 	},
-	'personal-finance-manager': {
-		title: 'Personal Finance Manager',
-		description: 'Built with Next.js, MySQL, Tailwind',
+	'finance-manager': {
+		title: 'Finance Manager',
 		overview:
-			'The Personal Finance Manager is a web application designed to help users track their income and expenses, set budgets, and visualize financial data through interactive summaries and charts. With features like transaction management, budget tracking, and customizable categories, it provides a solution for managing personal finances. The application also supports secure user authentication to ensure data privacy and protection.',
+			'The Finance Manager is a web application designed to help users track their income and expenses, set budgets, and visualize financial data through interactive summaries and charts. With features like transaction management, budget tracking, and customizable categories, it provides a solution for managing finances. The application also supports secure user authentication to ensure data privacy and protection.',
 		figmaFile: '../../static/portfolio/figma/personalFinanceManagerFigma.fig',
 		planningDescriptions: [
 			'Unlike many of my other projects, this time I sat down and really highlighted what features of the application I could like to be able to complete. This is so that I will not be stuck in a cycle of trying to make the application perfect, but rather scope out the project and complete that. Therefore, I started out with writing the user stories, which highlights a lot of the CRUD functions for income, expense, budget, categories, etc.',
@@ -90,7 +87,7 @@ export const projects: Record<string, Project> = {
 		],
 		planningImages: Object.values(personalFinanceManagerImages),
 		demoDescription:
-			'This demo walks through the main features of the Personal Finance Manager app, showing the tracking of income, expenses, budgets, categories, and reports visualisation.',
+			'This demo walks through the main features of the Finance Manager app, showing the tracking of income, expenses, budgets, categories, and reports visualisation.',
 		demoVideo: todolistDemo,
 		obstacles: [
 			"A big challenge of this application, was the authentication, specifically protecting the routes. Although, I have done this in my To-Do-List app it checked the tokens on every page load causing a little bit of repetitive code. While for this application, I wanted to make use of the middleware, to check the application for valid tokens whenever the user navigates to specified pages. However, I thought the middleware.ts file had to be in the 'root' of a nextjs project, which was incorrect. So, I was stuck in the cycle of trying to make it work at the 'root' of the project, when that is not even possible. I finally realised that it was supposed to go in the root of '/src'.",
@@ -100,12 +97,11 @@ export const projects: Record<string, Project> = {
 		summary:
 			'Building this to-do list application was a valuable experience that strengthened my skills in full-stack development, especially with React and Express. I learned a lot about efficient state management, context, user authentication, bearer tokens, UI design, and optimizing responsiveness. Although this is a simple to-do list application, I plan to add more categorization options in the future, such as creating collections and organizing tasks within them.',
 		thumbnail: mintyPlanThumbnail,
-		sourceCodeLink: 'https://github.com/DanielvTran/personal-finance-manager',
-		slug: 'personal-finance-manager'
+		sourceCodeLink: 'https://github.com/DanielvTran/finance-manager',
+		slug: 'finance-manager'
 	},
 	'qa-testing-playwright': {
 		title: 'QA Testing Playwright',
-		description: 'Test Hacker News with Playwright',
 		overview:
 			'This is a project to try out qa end-to-end testing with Playwright. The goal is to test the Hacker News website to see if the website is working as expected. The tests include checking if the website is displaying the new articles from newest to oldest, if the links of the articles go to the right url and displays the right content, and if the css are displaying correctly.',
 		figmaFile: '../../static/portfolio/figma/personalFinanceManagerFigma.fig',

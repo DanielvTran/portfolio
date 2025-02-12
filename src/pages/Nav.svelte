@@ -3,8 +3,6 @@
 	import { smoothScroll } from '$lib/helper';
 	import { isNavOpen } from '$lib/stores';
 
-	let isOpen = false;
-
 	// Toggle the hamburger menu on small screens
 	const toggleMenu = () => {
 		isNavOpen.update((prev) => !prev);
