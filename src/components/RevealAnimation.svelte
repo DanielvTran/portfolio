@@ -45,6 +45,8 @@
 	export let rotate = 0;
 	export let blur = 0;
 	export let scale = 1;
+	export let rootMargin = '0px 0px -50% 0px';
+	export let threshold = 0.1;
 
 	// Event handlers
 	export let onRevealStart: ((node: HTMLElement) => void) | undefined = undefined;
@@ -57,8 +59,8 @@
 
 	// Optional observer config
 	export let root: Element | Document | null = null;
-	export let rootMargin: string | undefined = undefined;
-	export let threshold: number | undefined = undefined;
+	// export let rootMargin: string | undefined = undefined;
+	// export let threshold: number | undefined = undefined;
 </script>
 
 <div
