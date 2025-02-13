@@ -9,7 +9,10 @@
 	const socialList = Object.values(socialLinks); // Convert Object into Array
 </script>
 
-<div id="hero" class="hero bg-primary min-h-screen w-full flex items-center justify-center">
+<div
+	id="hero"
+	class="hero bg-primary min-h-screen w-full flex items-center justify-center xxs:py-10"
+>
 	<div
 		class="hero-content w-full flex flex-col lg:flex-row items-center justify-center lg:gap-10 lg:px-20"
 	>
