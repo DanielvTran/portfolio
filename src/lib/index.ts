@@ -28,6 +28,7 @@ const personalFinanceManagerImages = Object.values(
 // Demo
 import personalWebsiteDemo from '../../static/portfolio/demo/personalWebsiteDemo.mov';
 import todolistDemo from '../../static/portfolio/demo/todolistDemo.mov';
+import personalFinanceManagerDemo from '../../static/portfolio/demo/personalFinanceManager.mov';
 import qaTestingPlaywrightDemo from '../../static/portfolio/demo/qaTestingPlaywrightDemo.mov';
 
 export const projects: Record<string, Project> = {
@@ -87,15 +88,15 @@ export const projects: Record<string, Project> = {
 		],
 		planningImages: Object.values(personalFinanceManagerImages),
 		demoDescription:
-			'This demo walks through the main features of the Finance Manager app, showing the tracking of income, expenses, budgets, categories, and reports visualisation.',
-		demoVideo: todolistDemo,
+			'This demo walks through the main features of the Finance Manager app, showing the tracking of income, expenses, budgets and, categories.',
+		demoVideo: personalFinanceManagerDemo,
 		obstacles: [
 			"A big challenge of this application, was the authentication, specifically protecting the routes. Although, I have done this in my To-Do-List app it checked the tokens on every page load causing a little bit of repetitive code. While for this application, I wanted to make use of the middleware, to check the application for valid tokens whenever the user navigates to specified pages. However, I thought the middleware.ts file had to be in the 'root' of a nextjs project, which was incorrect. So, I was stuck in the cycle of trying to make it work at the 'root' of the project, when that is not even possible. I finally realised that it was supposed to go in the root of '/src'.",
 			"Another significant hurdle was designing a user-friendly interface for mobile screens. The initial layout didn't adapt well to smaller devices, so I had to rethink my approach using CSS Flexbox and media queries. This involved careful consideration of how elements should reflow on different screen sizes to ensure a seamless experience.",
 			"Lastly, the app's initial design didn’t turn out as expected. The original vision didn't align with the functionality and user experience I wanted to achieve, so I made the tough decision to redesign it. This experience taught me the importance of flexibility in design and that sometimes, starting over is necessary to create a product that truly meets user needs."
 		],
 		summary:
-			'Building this to-do list application was a valuable experience that strengthened my skills in full-stack development, especially with React and Express. I learned a lot about efficient state management, context, user authentication, bearer tokens, UI design, and optimizing responsiveness. Although this is a simple to-do list application, I plan to add more categorization options in the future, such as creating collections and organizing tasks within them.',
+			'This Finance Manager project was a great learning experience that helped me improve my skills in full-stack development, especially with Next.js and MySQL. I learned a lot about user authentication, middleware, CRUD operations, and responsive design. Although the project is still in development, I plan to add more features like data visualization to provide users with a comprehensive financial overview.',
 		thumbnail: mintyPlanThumbnail,
 		sourceCodeLink: 'https://github.com/DanielvTran/finance-manager',
 		slug: 'finance-manager'
