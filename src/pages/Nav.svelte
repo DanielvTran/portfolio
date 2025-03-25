@@ -37,19 +37,50 @@
 		<ul
 			class="flex gap-5 sm:gap-5 lg:gap-[60px] 2xl:gap-[100px] text-md sm:text-md md:text-xl lg:text-2xl 2xl:text-3xl"
 		>
-			{#each ['About', 'Experiences', 'Skills', 'Projects'] as section, index}
-				<RevealAnimation preset="scale" delay={200 + index * 100} duration={700}>
-					<li>
-						<a
-							href={`#${section.toLowerCase()}`}
-							class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
-							on:click={(e) => smoothScroll(e, `#${section.toLowerCase()}`)}
-						>
-							{section}
-						</a>
-					</li>
-				</RevealAnimation>
-			{/each}
+			<RevealAnimation preset="scale" delay={200 + 0 * 100} duration={1000} y={0}>
+				<li>
+					<a
+						href={`#about}`}
+						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
+						on:click={(e) => smoothScroll(e, `#about`)}
+					>
+						About
+					</a>
+				</li>
+			</RevealAnimation>
+			<RevealAnimation preset="scale" delay={200 + 1 * 100} duration={1000} y={0}>
+				<li>
+					<a
+						href={`#experiences`}
+						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
+						on:click={(e) => smoothScroll(e, `#experiences`)}
+					>
+						Experiences
+					</a>
+				</li>
+			</RevealAnimation>
+			<RevealAnimation preset="scale" delay={200 + 2 * 100} duration={1000} y={0}>
+				<li>
+					<a
+						href={`#skills`}
+						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
+						on:click={(e) => smoothScroll(e, `#skills`)}
+					>
+						Skills
+					</a>
+				</li>
+			</RevealAnimation>
+			<RevealAnimation preset="scale" delay={200 + 3 * 100} duration={1000} y={0}>
+				<li>
+					<a
+						href={`#projects`}
+						class="text-primary font-bold text-right py-2 px-2 rounded transition-all duration-200 ease-in-out hover:border-primary hover:bg-primary hover:text-secondary"
+						on:click={(e) => smoothScroll(e, `#projects`)}
+					>
+						Projects
+					</a>
+				</li>
+			</RevealAnimation>
 		</ul>
 	</div>
 

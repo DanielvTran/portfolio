@@ -96,15 +96,17 @@
 						<Carousel images={project.planningImages} />
 					</RevealAnimation>
 
-					<RevealAnimation {...standardReveal}>
-						<a
-							href={project.figmaFile}
-							download="figma-file"
-							class="btn btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs transition-transform duration-300 hover:scale-110 mb-5"
-						>
-							Figma File
-						</a>
-					</RevealAnimation>
+					{#if project.figmaFile}
+						<RevealAnimation {...standardReveal}>
+							<a
+								href={project.figmaFile}
+								download="figma-file"
+								class="btn btn-primary border-primary bg-primary text-secondary hover:text-primary hover:bg-gray-300 hover:border-gray-300 font-bold 3xl:text-3xl 2xl:text-2xl xl:text-lg lg:text-0 xs:text-xs xxs:text-xs transition-transform duration-300 hover:scale-110 mb-5"
+							>
+								Figma File
+							</a>
+						</RevealAnimation>
+					{/if}
 				{/if}
 
 				<RevealAnimation {...standardReveal}>
@@ -124,11 +126,19 @@
 				</RevealAnimation>
 
 				<RevealAnimation {...standardReveal}>
-					<video controls width="600" class="">
-						<track kind="captions" />
-						<source src={project.demoVideo} type="video/mp4" />
-						Your browser does not support the video tag.
-					</video>
+					{#if !project.demoVideo}
+						<div
+							class="skeleton bg-primary text-white h-[300px] w-[600px] flex items-center justify-center font-bold"
+						>
+							COMING SOON!
+						</div>
+					{:else}
+						<video controls width="600" class="">
+							<track kind="captions" />
+							<source src={project.demoVideo} type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					{/if}
 				</RevealAnimation>
 
 				<RevealAnimation {...standardReveal}>

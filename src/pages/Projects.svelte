@@ -10,11 +10,11 @@
 
 <div
 	id="projects"
-	class="projects-container hero bg-primary secondary min-h-screen w-full p-10 xs:p-5 xxs:p-3"
+	class="projects-container hero bg-primary secondary min-h-screen w-full py-10 px-5 md:px-10 lg:px-20"
 >
 	<div class="hero-content w-full flex-col lg:flex-col my-28">
 		<RevealAnimation {...standardReveal}>
-			<div class="w-fit mt-20">
+			<div class="w-fit">
 				<h1
 					class="text-5xl font-bold text-secondary xl:text-7xl md:text-5xl sm:text-4xl xs:text-4xl xxs:text-5xl"
 				>

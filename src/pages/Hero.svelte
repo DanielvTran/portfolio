@@ -59,14 +59,6 @@
 		</div>
 
 		<div class="w-full max-w-xs sm:w-[50%]">
-			<RevealAnimation preset="scale" delay={1500} duration={600}>
-				<img
-					src={bodyshot}
-					class="rounded-lg shadow-2xl mt-6 lg:mt-0 mb-10 xs:mb-5 transition-transform duration-300 scale-90 hover:scale-100"
-					alt="Body shot of Daniel Tran"
-				/>
-			</RevealAnimation>
-
 			<div class="socials flex justify-evenly w-full mt-4 xl:mt-10">
 				{#each socialList as { icon, link }, index}
 					<RevealAnimation preset="scale" delay={1200 + index * 200} duration={600}>
@@ -81,6 +73,14 @@
 					</RevealAnimation>
 				{/each}
 			</div>
+
+			<RevealAnimation preset="scale" delay={1500} duration={600}>
+				<img
+					src={bodyshot}
+					class="rounded-lg shadow-2xl mt-6 lg:mt-0 mb-10 xs:mb-5 transition-transform duration-300 scale-90 hover:scale-100"
+					alt="Body shot of Daniel Tran"
+				/>
+			</RevealAnimation>
 		</div>
 	</div>
 </div>

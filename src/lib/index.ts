@@ -5,6 +5,7 @@ import todolistThumbnail from '../../static/portfolio/thumbnails/todolistThumbna
 import personalWebsiteThumbnail from '../../static/portfolio/thumbnails/personalWebsiteThumbnail.png';
 import mintyPlanThumbnail from '../../static/portfolio/thumbnails/mintyPlanThumbnail.png';
 import qaTestingPlaywrightThumbnail from '../../static/portfolio/thumbnails/qaTestingPlaywrightThumbnail.png';
+import kashyCapstoneThumbnail from '../../static/portfolio/thumbnails/kashyCapstoneProjectThumbnail.png';
 
 // Planning
 const personalPortfolioImages = Object.values(
@@ -21,6 +22,12 @@ const toDoListImages = Object.values(
 
 const personalFinanceManagerImages = Object.values(
 	import.meta.glob('../../static/portfolio/planning/personalfinancemanager/*.png', {
+		eager: true
+	})
+).map((module: any) => module.default) as string[];
+
+const kashyCapstoneProjectImages = Object.values(
+	import.meta.glob('../../static/portfolio/planning/kashycapstoneproject/*.png', {
 		eager: true
 	})
 ).map((module: any) => module.default) as string[];
@@ -120,6 +127,31 @@ export const projects: Record<string, Project> = {
 		thumbnail: qaTestingPlaywrightThumbnail,
 		sourceCodeLink: 'https://github.com/DanielvTran/playwright-testing',
 		slug: 'qa-testing-playwright'
+	},
+	'kashy-capstone-project': {
+		title: 'Kashy Capstone Project',
+		overview:
+			'During my final year at QUT, my capstone group was tasked with redesigning and redeveloping Kashy Australia’s website. The existing WordPress site was outdated and no longer aligned with modern design trends. While the client had been maintaining it, they wanted a more visually appealing and user-friendly platform. Our goal was to create a fresh, modern website that enhanced usability and better represented their brand. My main contributions included implementing the new input forms for the quote enquiry process and setting up Nodemailer to handle email notifications efficiently.',
+		figmaFile: '',
+		planningDescriptions: [
+			'For this project, we utilized agile methodologies to plan and execute the redesign of the Kashy Australia website, ensuring alignment with the client’s requirements. We began by conducting a thorough analysis of the existing site to identify areas for improvement based on the client’s goals and feedback. This involved reviewing the site structure, content, and design elements to determine what was working well and what needed to be updated. We then created a detailed project plan outlining key tasks, milestones, and deliverables to ensure the final product met the client’s expectations at every stage of the redesign.',
+			'We received the design schema from the client and then prototyped the new design in Figma. This was a crucial step, as it allowed us to visualize the website before development. We then proceeded with development, using the latest technologies, such as React. Additionally, we ensured that the website was fully responsive, providing an optimal viewing experience across all devices.',
+			'We had fortnightly sprint meetings with the client to showcase our progress and communicate with the client’s developer on the SWOT analysis and potential website improvements. Additionally, we held weekly meetings with our tutor to present our progress and receive feedback on how to enhance the website. This was a crucial part of the project, as it allowed us to gather valuable insights and ensure we were on the right track.'
+		],
+		planningImages: Object.values(kashyCapstoneProjectImages),
+		demoDescription:
+			'This demo shows the redesign of the website, highlighting the different pages that have been redesigned. It also demonstrates the implementation of emails being sent after the quote form has been completed.',
+		demoVideo: '',
+		obstacles: [
+			'One of the biggest challenges I faced was transitioning into web development, as my previous experience was primarily in application development using Python and C#. Learning JavaScript and React.js required me to adapt to a component-based framework and new programming paradigms. Initially, this shift in thinking was difficult, but I overcame this challenge by relying on documentation, online video tutorials, and a trial-and-error approach. By experimenting with different concepts and applying what I learned in small projects, I gradually became more confident in using React effectively and ultimately became more comfortable with web development.',
+			'Another obstacle was working with API endpoints, particularly when integrating Nodemailer. Understanding how email services handle authentication and message delivery involved some trial and error. However, through debugging and researching best practices, I was able to implement it successfully.',
+			'Effective communication within the team was also a challenge, especially when working with people I had just met. Initially, it was difficult to align our ideas and collaborate efficiently. However, by maintaining open communication and actively considering different perspectives, I was able to build strong working relationships. I made sure to be both supportive and receptive to feedback, adapting my approach when necessary. This helped foster a collaborative and inclusive environment where we could problem-solve together and make well-informed decisions as a team.'
+		],
+		summary:
+			'Through this project, I gained valuable experience in web development, particularly in transitioning from application development to working with JavaScript and React.js. I also developed a deeper understanding of integrating API endpoints, such as setting up Nodemailer for automated emails. Overcoming challenges in team communication strengthened my ability to collaborate effectively, even in new team environments. The project was a success, with the client highly satisfied with the redesign and usability improvements. They appreciated the modernized design and enhanced functionality, ultimately asking me to continue working with them on a freelance basis. This experience not only expanded my technical skills but also provided an opportunity to build professional relationships and gain real-world experience in client collaboration.',
+		thumbnail: kashyCapstoneThumbnail,
+		sourceCodeLink: '',
+		slug: 'kashy-capstone-project'
 	}
 };
 
