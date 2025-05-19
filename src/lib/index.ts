@@ -156,10 +156,24 @@ export const projects: Record<string, Project> = {
 };
 
 export const jobExperiences: Record<string, JobExperiences> = {
+	'grace-simpkins-personal-tutors': {
+		startDate: 'April 2025',
+		endDate: 'Present',
+		position: 'FullStack Web Developer',
+		company: 'Grace Simpkins Personal Tutors',
+		description:
+			'At this role I was responsible for maintaining assessment, and calendar applications. I was also responsible for developing a payment application.',
+		responsibilities: [
+			'Maintaining legacy applications on vue and angular for 3 proprietary applications.',
+			'In the process of updating code bases to the latest versions of vue and angular.',
+			'Writing missing documentation that was missing from previous developers',
+			'Containerised applications to improve collaboration with other developers.'
+		]
+	},
 	'kashy-australia': {
 		startDate: 'January 2024',
 		endDate: 'Present',
-		position: 'Frontend Web Developer',
+		position: 'FullStack Web Developer',
 		company: 'Kashy Australia',
 		description:
 			'At this role I was responsible for designing the webpage using figma, and also creating the frontend of the internal operations side of the website.',
@@ -173,7 +187,7 @@ export const jobExperiences: Record<string, JobExperiences> = {
 	'creator-camp': {
 		startDate: 'January 2024',
 		endDate: 'August 2024',
-		position: 'Frontend Web Developer',
+		position: 'FullStack Web Developer',
 		company: 'Creator Camp',
 		description:
 			'I was responsible for developing and maintaining the internal operations of the frontend application, ensuring seamless functionality, and an intuitive user interface.',
